@@ -1,0 +1,19 @@
+{
+  "name": "TradingHours Docs",
+  "version": "0.0.1",
+  "description": "Tradinghours.com API docs",
+  "main": "index.js",
+  "authors": {
+    "name": "TradingHours.com",
+    "email": "support@tradinghours.com"
+  },
+  "repository": "docs/TradingHours Docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
