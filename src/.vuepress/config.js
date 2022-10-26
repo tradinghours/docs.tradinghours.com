@@ -6,9 +6,8 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'TradingHours API Docs',
   description: 'The most trusted source for financial calendar reference data',
-
   head: [
-    ['link', { rel: 'icon', href: '/assets/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
       'link',
       {
@@ -30,11 +29,13 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: "/assets/logo.png",
-    repo: 'https://gitlab.com/tradinghours/docs',
-    colorModeSwitch: false,
-    colorMode: 'light',
+    // repo: 'https://gitlab.com/tradinghours/docs',
+    // repoLabel: 'Edit Page',
+    // colorModeSwitch: false,
+    // colorMode: 'light',
+    contributors: false,
+
     navbar: [
-        { text: 'Home', link: '/' },
         {
             text: 'Version',
             children: [
@@ -42,7 +43,7 @@ export default defineUserConfig({
                 { text: '2.0', link: '/2.x/' },
             ]
         },
-        { text: 'Account', link: 'https://www.tradinghours.com/dashboard' },
+        { text: 'TradingHours.com', link: 'https://www.tradinghours.com/dashboard' },
     ],
   }),
 
