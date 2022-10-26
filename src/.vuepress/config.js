@@ -1,70 +1,59 @@
-const { description } = require('../../package')
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
+import { searchPlugin } from '@vuepress/plugin-search'
 
-module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
-  title: 'Vuepress Docs Boilerplate',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
-  description: description,
 
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
+export default defineUserConfig({
+  lang: 'en-US',
+  title: 'TradingHours API Docs',
+  description: 'The most trusted source for financial calendar reference data',
+
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['link', { rel: 'icon', href: '/assets/favicon.ico' }],
+    [
+      'link',
+      {
+        href:
+          'https://fonts.googleapis.com/css?family=Lato:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i',
+        rel: 'stylesheet',
+        type: 'text/css',
+      },
+    ],
+    // Add Google Tag Manager
+    ['script', {}, `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T5J2ZQM');
+    `]
   ],
 
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
-  themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
-    sidebar: {
-      '/guide/': [
+  theme: defaultTheme({
+    logo: "/assets/logo.png",
+    repo: 'https://gitlab.com/tradinghours/docs',
+    colorModeSwitch: false,
+    colorMode: 'light',
+    navbar: [
+        { text: 'Home', link: '/' },
         {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
-  },
+            text: 'Version',
+            children: [
+                { text: '3.0', link: '/3.x/' },
+                { text: '2.0', link: '/2.x/' },
+            ]
+        },
+        { text: 'Account', link: 'https://www.tradinghours.com/dashboard' },
+    ],
+  }),
 
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ]
-}
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: 'search',
+        },
+      },
+    }),
+  ],
+})
