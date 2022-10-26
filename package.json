@@ -1,5 +1,5 @@
 {
-  "name": "TradingHours Docs",
+  "name": "tradinghours-docs",
   "version": "0.0.1",
   "description": "Tradinghours.com API docs",
   "main": "index.js",
@@ -14,6 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
+    "vuepress": "^0.14.11"
   }
 }
