@@ -4,79 +4,58 @@
 
 ## Welcome to TradingHours.com
 
-TradingHours.com is the most trusted source for financial calendaring reference data. Our data is carefully collected and verified using only primary sources.
+TradingHours.com is the most trusted source for financial calendar reference data. All data is carefully researched and verified using only primary sources.
 
-## Why Trading Hours?
-Traditionally, it can be difficult to answer simple questions, like "Is the market open now?" or "When does the market close for this holiday?". Yet, it's never been more critical to have the answers to these questions quickly and accurately. Having accurate calendar data can help reduce risks associated with trading, such as failed trades, extra interest paid, and administrative costs.
+## Why TradingHours.com?
 
-Our APIs allow you to easily pull market holidays and trading schedule information into your own application or trading algorithm. We've made answering simple questions about markets more effortless than ever before with our comprehensive API.
+In today's globally connected financial world, it has never been more important to have accurate financial calendar information.
 
-## How Do We Keep Data Up-to-Date and Accurate?
+Our data can help you streamline operations, reduce settlement risk, prevent failed trades, avoid extra interest paid due to unexpected settlement delays, back-test trading strategies, and much more.
 
-All data is collected and verified using primary sources.
+APIs allow you to easily import market holidays, non-settlement dates, and trading schedule information into your own application while keeping data always up-to-date.
 
-After data is collected, our skilled team of researchers continuously monitors markets for schedule changes. Once a change is found, we update our database immediately, which reflects in the APIs. This ensures our data is always up-to-date and adheres to the highest standards for accuracy.
+## How data collected and maintained?
 
-## What Does Trading Hours Cover?
-We currently have coverage of over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, and futures markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
+All data is carefully researched and verified using only primary sources.
 
-Our data includes:
-- All holidays, including: trading holidays, settlement holidays, and partial days.
-- Support for timezones and daylight savings time transitions
-- Definitions for weekends for each market
-- Open and close time for each market
+After data is collected, our researcher team continuously monitors markets for schedule changes. Once a change is found, the database is updated and immediately reflected in the APIs. This ensures your data is always up-to-date and adheres to the highest standards for accuracy.
+
+## What data is covered?
+
+We cover of over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
+
+Data includes:
+- Trading holidays
+- Non-settlement dates
+- Currency / FX holidays
+- Partial and irregular schedules
 - Detailed trading phase information
-- Support for irregular and interday trading hours
+- Fully support for timezones and daylight savings transitions
 
 ## Data Licensing
 
-We have three subscription levels that grant access to our data. Two of these are API-level subscriptions. Our first subscription level, <b>TradingHours Pro</b>, grants access to our <a href="https://www.tradinghours.com/countdown" target=_blank>Countdown Dashboard</a>. It gives the ability to customize the markets that appear on the dashboard with an ad-free experience. However, with TradingHours Pro, you do not get access to any of the APIs in this documentation.
+Data licenses are available for enterprise firm, retail investors, and applications developers.
 
-Both **Market Status API** and **Enterprise API** subscriptions have access to APIs with different access levels.
+We suggest the **Market Status API** for retail investors, website developers, or application developers.
+This API tells you if a market is open or closed right now and when it opens or closes next.
+This is a very powerful tool that let's you add countdowns or market status indicators to your own website or app.
 
-### Market Status API
-<b>Who should use it?</b> The Market Status API subscription is meant for Retail Traders, Developers, and Individuals.
+For enterprise-level and institutional investors, we make available our entire database of past and future market holidays and trading hours.
 
-<b>What do I get?</b> With this subscription, you will have access to multiple APIs that provide you a snapshot of the current moment. This will tell you if markets are open right now and when they open or close next. You'll be able to see the current trading phase as well. You'll see information for current holidays and half-days.
-
-<b>What can I use this data for?</b>
-The Market Status API can be used for:
-- Building dashboards,
-- Adding countdowns to your own website or application,
-- Activating trading systems when markets open,
-- Detecting market holidays,
-- and more.
-
-<b>How do I Get Started?</b>
-
-To get started, <a href="https://www.tradinghours.com/market-status-api" target=_blank>sign-up and start a free trial.</a>
-
-### Enterprise API
-<b>Who should use it?</b> The Enterprise API is available to Enterprise Companies.
-
-<b>What do I get?</b> With the Enterprise Subscription, you'll receive access to the Market Status API <b>plus</b> future holidays dates, full trading schedules, and more.
-
-<b>What can I use this data for?</b> The Enterprise API subscription provides you with complete market calendaring reference data. With this subscription, you can do everything the Market Status API allows supports. Additionally, working with Trading Hour's accurate system calendars help with:
-- Significantly reducing operational risks associated with trading and settlement,
-- Back-testing trading algorithms,
-- Improving system monitoring,
-- Avoiding unnecessary administrative costs,
-- and more.
-
-<b>How do I Get Started?</b>
-
-To get started, <a href="https://www.tradinghours.com/data" target=_blank>request a trial</a>. Be sure to use your **_@company.com_** email.
-
-### Subscription Tiers
-
-In both the Market Status API and Enterprise API subscriptions, we offer three tiers of market access. This will help you only pay for what you need access to. The three options are:
+In both the Market Status API and Enterprise API subscriptions, we offer three tiers of access. This ensures you only pay for the data you need. The three options are:
 - Core Markets: Includes the 25 largest equity markets around the world.
 - Emerging Markets: Includes Core Markets plus all global equity markets.
 - All Markets: Includes all from Core and Emerging, plus derivative markets.
 
+Custom packages are also available.
 
 ## Data Delivery
 
-Data can be accessed through our API for downloaded in bulk as a zip file. Delivery formats through the API are JSON and CSV. Flat file downloads are in CSV and Excel format.
+Data can be accessed through our API or downloaded in bulk as a zip file. Delivery formats through the API are JSON and CSV. Bulk flat file downloads are in CSV and Excel format.
 
 All data is fully machine-readable and ready for integration into your own application.
+
+## How do I get started?
+
+To get started, <a href="https://www.tradinghours.com/data" target=_blank>request a quote</a>.
+

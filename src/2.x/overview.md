@@ -17,7 +17,7 @@ This API allows clients to integrate our high-quality data into their own applic
 ## Authentication
 
 All API endpoints require a valid API token.
-If you are a subscriber, visit your account page to [create an API token](https://www.tradinghours.com/settings#/api).
+If you are a subscriber, visit your account page to [create an API token](https://www.tradinghours.com/user/api-tokens).
 
 All requests must include your API token in a parameters called `api_token`.
 In the examples below we omit the `api_token` parameter for clarity but it is required.
@@ -31,5 +31,5 @@ https://www.tradinghours.com/api/v2/status?exchange=nyse&api_token=YOUR_TOKEN_HE
 ```
 
 ::: tip Note
-Replace `YOUR_TOKEN_HERE` with your API token. [Create API Token &raquo;](https://www.tradinghours.com/settings#/api)
+Replace `YOUR_TOKEN_HERE` with your API token. [Create API Token &raquo;](https://www.tradinghours.com/user/api-tokens)
 :::

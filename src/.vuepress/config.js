@@ -29,22 +29,26 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: "/assets/logo.png",
-    // repo: 'https://gitlab.com/tradinghours/docs',
+    repo: 'https://gitlab.com/tradinghours/docs',
     // repoLabel: 'Edit Page',
     // colorModeSwitch: false,
     // colorMode: 'light',
     contributors: false,
-
+    sidebarDepth: 0,
     navbar: [
-        {
-            text: 'Version',
-            children: [
-                { text: '3.0', link: '/3.x/' },
-                { text: '2.0', link: '/2.x/' },
-            ]
-        },
-        { text: 'TradingHours.com', link: 'https://www.tradinghours.com/dashboard' },
+      // {
+      //   text: 'Version',
+      //   children: [
+      //     { text: '3.0', link: '/3.x/' },
+      //     { text: '2.0', link: '/2.x/' },
+      //   ]
+      // },
+      { text: 'TradingHours.com', link: 'https://www.tradinghours.com/dashboard' },
     ],
+    sidebar: {
+      '/3.x/': require('./3.x'),
+      '/2.x/': require('./2.x'),
+    },
   }),
 
   plugins: [

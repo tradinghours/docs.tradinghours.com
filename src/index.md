@@ -1,4 +1,5 @@
 ---
+title: Getting Started
 home: home
 heroImage: /assets/logo.png
 heroHeight: 100

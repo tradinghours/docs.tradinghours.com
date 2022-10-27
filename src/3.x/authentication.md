@@ -4,14 +4,11 @@
 
 ## Overview
 
-All API endpoints require an API token. If you are a subscriber, visit your [account page to create an API token.](https://www.tradinghours.com/settings#/api)
+All API endpoints require an API token. If you are a subscriber, visit your [account page to create an API token.](https://www.tradinghours.com/user/api-tokens)
 
-**Please Note:** You must have an active subscription of [**Market Status API**](./introduction.md#market-status-api) or [**Enterprise API Access**](./introduction.md#enterprise-api) to use the APIs.
+**You must have an active subscription to use the APIs**.
 
-::: warning Notice
-Our pricing is structured around what data you need. This results in different plans with different levels of access. Keep in mind, you may not have access to all endpoints or markets.
-For details, please <a href="https://www.tradinghours.com/contact" target=_blank>contact us</a>.
-:::
+For price details, please [request a quote](https://www.tradinghours.com/data).
 
 ## Details
 
@@ -25,5 +22,5 @@ https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&api_token=Y
 ```
 
 ::: danger Important
-For the APIs to return data, you need to replace "YOUR_TOKEN_HERE" with your API token. Get your [API Token here.](https://www.tradinghours.com/settings#/api)
+For the APIs to return data, you need to replace "YOUR_TOKEN_HERE" with your API token. Get your [API Token here.](https://www.tradinghours.com/user/api-tokens)
 :::

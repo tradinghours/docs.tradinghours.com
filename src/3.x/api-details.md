@@ -6,13 +6,13 @@
 
 We use a proprietary code to identify all markets and trading venues in our system. This code is called a Financial Identifier, or `FinID`.
 
-To obtain the `FinId`, use the [list markets](./endpoints/find-markets.md#list-all-markets) endpoint to enumerate all markets you have access to as part of your subscription. You can then use the [market details](./endpoints/market-details.md) endpoint to see specifics about which securities are included in a `FinID`.
+To obtain a list of all `FinId`, use the [list markets](./endpoints/find-markets.md#list-all-markets) endpoint to enumerate all markets you have access to as part of your subscription. You can then use the [market details](./endpoints/market-details.md) endpoint to see specifics about which securities are included in each `FinID`.
 
-The `FinID` is more specific than the standard Market Identifier Code, or `MIC`. However, you can use the `MIC` in place of the `FinID`, and our system will generate the best match. If you need help mapping securities and `FinID`s, <a href="https://www.tradinghours.com/contact" target=_blank>our team is available to help</a>.
+The `FinID` is more specific than the standard Market Identifier Code, or `MIC`. However, you can use the `MIC` in place of the `FinID`. If you use `MIC`, the API will return results for the best matching `FinID`. If you need help mapping specific securities or MICs to FinIDs, <a href="https://www.tradinghours.com/contact" target=_blank>our team is available to help</a>.
 
-Use the query string parameter `fin_id` to specify a market or markets. Some endpoints support multiple `FinID`s in a single request.
-To specify multiple `FinID`s, separate them by a comma.
-Whenever possible, we recommend making [bulk requests](#bulk-requests) with multiple `FinID`s to avoid hitting  [rate limit restrictions](#rate-limits).
+Use the query string parameter `fin_id` to specify a market or markets. Some endpoints support multiple FinIDs in a single request.
+To specify multiple FinIDs, separate them with commas.
+Whenever possible, we recommend making [bulk requests](#bulk-requests) with multiple FinIDs to avoid exceeding [rate limit restrictions](#rate-limits).
 
 ### Examples
 Remember to use your [authentication token](./authentication.md) for all requests.
@@ -26,7 +26,7 @@ https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
 ```
 
 ::: warning Notice
-Our system does have [rate limit restrictions](#rate-limits). Specify multiple `FinID`s or `MIC`s in a single request to avoid hitting restrictions.
+Our system does have [rate limit restrictions](#rate-limits). Specify multiple `FinID`s or `MIC`s in a single request to avoid exceeding restrictions.
 :::
 
 
