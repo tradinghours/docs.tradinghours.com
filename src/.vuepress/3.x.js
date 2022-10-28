@@ -1,7 +1,6 @@
 module.exports = [
     {
         title: "Getting Started",
-        collapsable: false,
         children: [
             '/3.x/introduction',
             '/3.x/authentication',
@@ -9,7 +8,6 @@ module.exports = [
         ],
     }, {
         title: "Market Status API",
-        collapsable: false,
         children: [
             '/3.x/endpoints/find-markets',
             '/3.x/endpoints/market-details',
@@ -19,7 +17,6 @@ module.exports = [
         ],
     }, {
         title: "Enterprise API",
-        collapsable: false,
         children: [
             '/3.x/enterprise/market-status',
             '/3.x/enterprise/trading-hours',
