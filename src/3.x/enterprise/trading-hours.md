@@ -19,7 +19,7 @@ Our pricing is structured so you only pay for what you need. Accordingly, the Tr
 :::
 
 ::: tip Notice
-Unlike our other API endpoints, the trading hours endpoints do not support CSV format or multiple `FinID`s. This is due to the nested structure of the API results.
+Unlike our other API endpoints, the trading hours endpoints do not support CSV format or multiple FinIDs. This is due to the nested structure of the API results.
 :::
 
 ## Single-Day Trading Hours API
@@ -65,18 +65,15 @@ Supported query string parameters are listed in the table below:
 | fin_id | Valid FinID | N/A | Specify which market to show data for. |
 | date | yyyy-mm-dd | Current Date | Specifies the date of the information. |
 
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
-
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
-#### Get Full Trading Schedule with `FinID`
+#### Get Full Trading Schedule with FinID
 ```
 https://api.tradinghours.com/v3/markets/hours?fin_id=us.nyse
 ```
 
-#### Get Full Trading Schedule with `MIC`
+#### Get Full Trading Schedule with MIC
 ```
 https://api.tradinghours.com/v3/markets/hours?fin_id=XNYS
 ```
@@ -333,17 +330,17 @@ If you use a query string parameter that isn't supported, the API will ignore th
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
-#### Get Simplified Trading Hours for `FinID`
+#### Get Simplified Trading Hours for FinID
 ```
 https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=us.nyse
 ```
 
-#### Get Simplified Trading Hours for `MIC`
+#### Get Simplified Trading Hours for MIC
 ```
 https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=XNYS
 ```
 
-#### Get Simplified Trading Hours for `FinID`
+#### Get Simplified Trading Hours for FinID
 ```
 https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=JP.JPX.INDEXSPECIAL
 ```

@@ -8,7 +8,7 @@ We use a proprietary code to identify all markets and trading venues in our syst
 
 To obtain a list of all FinIDs, use the [list markets](./endpoints/find-markets.md#list-all-markets) endpoint to enumerate all markets you have access to as part of your subscription. You can then use the [market details](./endpoints/market-details.md) endpoint to see specifics about which securities are included in each FinID.
 
-The FinID is more specific than the standard Market Identifier Code, or `MIC`. However, you can use the MIC in place of the FinID. If you use MIC, the API will return results for the best matching FinID. If you need help mapping specific securities or MICs to FinIDs, <a href="https://www.tradinghours.com/contact" target=_blank>our team is available to help</a>.
+The FinID is more specific than the standard Market Identifier Code, or MIC. However, you can use the MIC in place of the FinID. If you use MIC, the API will return results for the best matching FinID. If you need help mapping specific securities or MICs to FinIDs, <a href="https://www.tradinghours.com/contact" target=_blank>our team is available to help</a>.
 
 Use the query string parameter `fin_id` to specify a market or markets. Some endpoints support multiple FinIDs in a single request.
 To specify multiple FinIDs, separate them with commas.
@@ -52,7 +52,7 @@ You can always check the `X-RateLimit-Limit` and `X-RateLimit-Remaining` respons
 There are several techniques to avoid exceeding the rate limit listed below:
 
 - **Caching:**
-	- Response caching should be used to avoid sending the same API call multiple times within short period of time. It is particularly important to [cache the response from the Market Status API](./endpoints/market-status.md#caching).
+	- Response caching should be used to avoid sending the same API call multiple times within a short period of time. It is particularly important to [cache the response from the Market Status API](./endpoints/market-status.md#caching).
 
 - **Delays Between Requests:**
 	- By adding a small 1 second delay between requests you can avoid exceeding the rate limit in most cases.

@@ -4,20 +4,20 @@
 
 ## Market Holidays Endpoint
 
-The Market Holiday API allows you to easily access past and future holiday calendars for all markets based on `FinID`.
+The Market Holiday API allows you to easily access past and future holiday calendars for all markets based on FinID.
 
 ::: warning Note
 Our pricing is structured around what data you need. This results in different plans with different levels of access. The Market Holidays API endpoint is not available on all plans. [Contact our team for more details](https://www.tradinghours.com/contact).
 :::
 
 ::: tip Note
-Unlike our other API endpoints, the market holidays endpoint does <b>not</b> support multiple `FinID`s. Instead, it lists all holidays for a single `FinID`.
+Unlike our other API endpoints, the market holidays endpoint does <b>not</b> support multiple FinIDs. Instead, it lists all holidays for a single FinID.
 :::
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| fin_id | String | The `FinID` for the market. |
+| fin_id | String | The FinID for the market. |
 | date | Date | Shows the date of the holiday for the market. |
 | name | String | Describes the name of the holiday. |
 | schedule | String | Describes if the market closes for the holiday. |
@@ -41,12 +41,12 @@ If you use a query string parameter that isn't supported, the API will ignore th
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
-#### Get Holidays with `FinID`
+#### Get Holidays with FinID
 ```
 https://api.tradinghours.com/v3/markets/holidays?fin_id=us.nyse
 ```
 
-#### Get Holidays with `MIC`
+#### Get Holidays with MIC
 ```
 https://api.tradinghours.com/v3/markets/holidays?fin_id=XNYS
 ```

@@ -1,4 +1,4 @@
-# Markets Details
+# Market Details
 
 [[toc]]
 
@@ -28,8 +28,6 @@ Supported query string parameters are listed in the table below:
 | ------------- | ------------- | --------- | --------- |
 | fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for. |
 | format | CSV, JSON | JSON | Specify output format |
-
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.

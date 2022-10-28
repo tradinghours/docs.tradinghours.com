@@ -20,7 +20,7 @@ Our pricing is structured around what data you need. This results in different p
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
 | local-time | ISO 8601 | The current local time at the market. |
-| status | Open, Closed | Open displays if it is currently a primary trading session. Closed will show otherwise, including pre- and post-trading sessions. |
+| status | String | "Open" displays if it is currently a primary trading session. "Closed" will show otherwise, including for pre- and post-trading sessions. |
 | reason | String | Explanation of the current response, including phase(s), holidays, and irregular schedules. |
 | until | ISO 8601 | Displays the end of the current phase. |
 | next_bell | ISO 8601 | Displays the time when the market opens or closes next. |
@@ -41,8 +41,6 @@ Supported query string parameters are listed in the table below:
 | format | CSV, JSON | JSON | Specify output format |
 | time | ISO 8601 | Current time | Specify the time that you'd like the information for. |
 
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
 ### Caching
 
 The results of the status API will not change until `until`.
@@ -52,16 +50,16 @@ Caching requests and using bulk API calls will help you avoid exceeding the [rat
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
-#### Get Details for Single `FinID` with Defined Time
+#### Get Details for Single FinID with Defined Time
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse&time=2020-11-27T12:55:00-04:00
 ```
-#### Get Details for Single `MIC` with Defined Time
+#### Get Details for Single MIC with Defined Time
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=XNYS&time=2020-11-27T12:55:00-04:00
 ```
 
-#### Get Details for Bulk `FinID`s with Defined Time
+#### Get Details for Bulk FinIDs with Defined Time
 
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&time=2020-11-27T12:55:00-04:00

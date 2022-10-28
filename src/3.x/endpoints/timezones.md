@@ -30,8 +30,6 @@ Supported query string parameters are listed in the table below:
 | ------------- | ------------- | --------- | --------- |
 | format | CSV, JSON | JSON | Specify output format |
 
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 

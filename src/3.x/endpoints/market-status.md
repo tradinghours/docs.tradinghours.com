@@ -13,19 +13,17 @@ You can use these details to:
 - Build dashboards
 - Add countdowns or market status indicators to your website or application
 - Activate trading algorithms when markets open
-- Detect market holidays and early closures
-
-These are just a few examples of what you can do with this API and the details it returns. In fact, this is the same API we use to power [Tradinghours.com](https://www.tradinghours.com)!
+- Detect market holidays and half-days
 
 ::: tip Note
-This API takes holidays and half-days into account but does not factor in circuit breakers or halts.
+This API takes previously-scheduled holidays and half-days into account but does **not** factor in circuit breakers or halts.
 :::
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
 | local-time | ISO 8601 | The current local time at the market. |
-| status | Open, Closed | Open displays if it is currently a primary trading session. Closed will show otherwise, including pre- and post-trading sessions. |
+| status | String | "Open" displays if it is currently a primary trading session. "Closed" will show otherwise, including for pre- and post-trading sessions. |
 | reason | String | Explanation of the current response, including phase(s), holidays, and irregular schedules. |
 | until | ISO 8601 | Displays the end of the current phase. |
 | next_bell | ISO 8601 | Displays the time when the market opens or closes next. |
@@ -42,10 +40,8 @@ Supported query string parameters are listed in the table below:
 
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
-| fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for. |
+| fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for |
 | format | CSV, JSON | JSON | Specify output format |
-
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes or will go to a 404.
 
 ### Caching
 
@@ -56,17 +52,17 @@ Caching requests and using bulk API calls will help you avoid exceeding the [rat
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
-#### Get Details for Single `FinID`
+#### Get Details for Single FinID
 
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse
 ```
-#### Get Details for Single `MIC`
+#### Get Details for Single MIC
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=XNYS
 ```
 
-#### Get Details for Bulk `FinID`s
+#### Get Details for Bulk FinIDs
 
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
@@ -80,7 +76,7 @@ http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&format=csv
 
 ### Sample JSON Responses
 
-#### Get Details for Single `FinID` - Holiday Partial Hours
+#### Get Details for Single FinID - Holiday Partial Hours
 ``` json
 {
    "data":{
@@ -103,7 +99,7 @@ http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&format=csv
 }
 ```
 
-#### Get Details for Bulk `FinID`s - Closed Market and Open Primary Market
+#### Get Details for Bulk FinIDs - Closed Market and Open Primary Market
 ```json
 {
     "data": {

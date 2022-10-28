@@ -107,9 +107,6 @@ Supported query string parameters are listed in the table below:
 | start | yyyy-mm-dd | Current date | Show holidays starting at this date |
 | end | yyyy-mm-dd | One year from current date | Show holidays until this date. |
 
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
-
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 

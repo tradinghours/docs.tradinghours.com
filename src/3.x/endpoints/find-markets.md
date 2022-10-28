@@ -41,9 +41,6 @@ Supported query string parameters are listed in the table below:
 | group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
 | format | CSV, JSON | JSON | Specify output format |
 
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
-
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
@@ -124,8 +121,6 @@ Supported query string parameters are listed in the table below:
 | q | Any | N/A | Free-form search field |
 | group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
 | format | CSV, JSON | JSON | Specify output format |
-
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.

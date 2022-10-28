@@ -14,15 +14,15 @@ Our data can help you streamline operations, reduce settlement risk, prevent fai
 
 APIs allow you to easily import market holidays, non-settlement dates, and trading schedule information into your own application while keeping data always up-to-date.
 
-## How data collected and maintained?
+## How data is collected and maintained
 
 All data is carefully researched and verified using only primary sources.
 
-After data is collected, our researcher team continuously monitors markets for schedule changes. Once a change is found, the database is updated and immediately reflected in the APIs. This ensures your data is always up-to-date and adheres to the highest standards for accuracy.
+After data is collected, our research team continuously monitors markets for schedule changes. Once a change is found, the database is updated and immediately reflected in the APIs. This ensures your data is always up-to-date and adheres to the highest standards for accuracy.
 
 ## What data is covered?
 
-We cover of over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
+We cover over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
 
 Data includes:
 - Trading holidays
@@ -38,7 +38,7 @@ Data licenses are available for enterprise firm, retail investors, and applicati
 
 We suggest the **Market Status API** for retail investors, website developers, or application developers.
 This API tells you if a market is open or closed right now and when it opens or closes next.
-This is a very powerful tool that let's you add countdowns or market status indicators to your own website or app.
+This is a very powerful tool that lets you add countdowns or market status indicators to your own website or app.
 
 For enterprise-level and institutional investors, we make available our entire database of past and future market holidays and trading hours.
 
