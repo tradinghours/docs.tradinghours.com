@@ -4,34 +4,32 @@
 
 ## List All Markets
 
-To start using the API, you first need to know the `FinID` for the market or markets you're in. To find this, you can use this List Markets endpoint to get the information programmatically. Alternatively, you can use `MIC` for our APIs, and our system will select the closest matching `FinID` and return the appropriate information.
+To start using the API, you first need to know the FinID for the market or markets you're interested in. To find this, you can use this List Markets endpoint to get the information programmatically. Alternatively, you can use the MIC and our system will select the closest matching FinID and return the appropriate information.
 
 ::: tip Tip
-You can also browse our [data coverage](https://www.tradinghours.com/data/coverage) to see what's available.
+You can also browse our [data coverage](https://www.tradinghours.com/data/coverage) to see what markets are available.
 :::
 
-After looking through the list of all markets, you may still be unsure which `FinID` to use. You can use `MIC` in place of the `FinID` or feel free to <a href="https://www.tradinghours.com/contact" target=_blank>contact us</a>.
-
-You can also use the [market details](./market-details.md) endpoint to get more information about a market. In the details, there is a `memo` field that describes the securities that fall under a `FinID`.
+You can also use the [market details](./market-details.md) endpoint to get more information about a market. In the details, there is a `memo` field that describes in detail the securities that are covered by a FinID.
 
 ### MICs (Market Identification Codes)
 
-We include segment `MIC` in the response to help you find the appropriate `FinID`. Typically, `MIC`'s alone are not granular enough to identify distinct trading schedules and calendars. That is why we use `FinID`, a proprietary market identifier. If you use `MIC` in place of the `FinID`, our system will select the closest match.
+We include segment MIC in the response to help you find the appropriate FinID. Typically, MICs alone are not granular enough to identify distinct trading schedules and calendars. That is why we created FinIDs - an identifier that uniquely identifies each distinct trading schedule. If you use MIC in place of the FinID, our system will select the closest match.
 
-In order to find the correct `FinID`, look at `exchange`, `market`, and `product`.
+In order to find the correct FinID, look at `exchange`, `market`, and `product`.
 
-::: warning Notice
-If you need help determining which `FinID` to use, <a href="https://www.tradinghours.com/contact">contact us</a>.
+::: tip We're here to help!
+If you need help determining which FinID to use, <a href="https://www.tradinghours.com/contact">contact us</a>. We'll be happy to help.
 :::
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| fin_id | String | The `FinID` for the market. |
+| fin_id | String | The FinID for the market. |
 | exchange | String | The exchange name of the market. |
 | market | String | The name of the market. |
 | products | String | Description of the products or securities group. |
-| mic | String | The `MIC` for the market. |
+| mic | String | The MIC for the market. |
 | asset_type | String | Describes the asset type of the market. |
 | group | String | Describes which market tier the market is included in. |
 
@@ -104,12 +102,12 @@ https://api.tradinghours.com/v3/markets?format=csv
     ],
 }
 ```
-## Lookup Markets
+## Lookup / Search Markets
 
-The "Lookup Markets" endpoint allows you to easily search for markets based on any attribute such as Exchange Name, Market Name, Security Description, MIC, or country.
+The "Lookup Markets" endpoint allows you to search for markets based on any attribute such as exchange name, market name, security description, MIC, or country.
 
 Each unique trading schedule or trading calendar is identified by a unique "FinID." Most exchanges have several different trading schedules for equities, bonds, futures, etc.
-In total, we track over 1,000 different trading schedules.
+In total, we track over 900 different trading schedules.
 
 This API allows you to easily search for the exact trading calendar you need.
 

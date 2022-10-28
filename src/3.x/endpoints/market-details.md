@@ -4,18 +4,18 @@
 
 ## Get Market Details
 
-Use the market details endpoint to get key information about a market using the `FinID`. This API will help identify the exact market or trading venue and give more details, such as asset type, products, and more.
+Use the market details endpoint to get key information about a market using a FinID. This API will help identify the exact market or trading venue and give more details, such as asset type and product or security.
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| fin_id | String | The `FinID` for the market. |
+| fin_id | String | The FinID for the market. |
 | country_code | ISO 3166 | Two-letter country code. |
 | exchange | String | The exchange name of the market. |
 | market | String | The name of the market. |
 | products | String | Description of the products or securities group. |
-| mic | String | The `MIC` for the market. |
-| mic_extended | String | The extended `MIC` for the market. |
+| mic | String | The MIC for the market. |
+| mic_extended | String | The extended MIC for the market. |
 | acronym | String | The acronym for the market. |
 | asset_type | String | Describes the asset type of the market. |
 | memo | String | A description or additional details about the trading venue. |
@@ -35,13 +35,13 @@ If you use a query string parameter that isn't supported, the API will ignore th
 Remember to use your [authentication token](../authentication.md) for all requests.
 
 
-#### Get Market Details for `FinID`
+#### Get Market Details for FinID
 
 ```
 https://api.tradinghours.com/v3/markets/details?fin_id=us.nyse
 ```
 
-#### Get Market Details for Bulk `FinID`s
+#### Get Market Details in Bulk
 
 ```
 https://api.tradinghours.com/v3/markets/details?fin_id=us.nyse,jp.jpx
