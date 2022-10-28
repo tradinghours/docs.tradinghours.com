@@ -4,23 +4,19 @@
 
 ## Real-Time Market Status (Enterprise)
 
-This API is the same as the [Market Status API](../endpoints/market-status.md) **except** the Enterprise API can also specify a particular time.
+This API is the same as the [Market Status API](../endpoints/market-status.md) **except** the Enterprise API allows you to specify a particular time in the past or the future.
 
 ### Past & Future Times
 
-This API also allows you to check a market's status at any time: past, present or future. Use the `time` query string parameter to specify a date and time. The `time` parameter should be in ISO 8601 format. E.g. `2020-02-27T01:23:45-05:00`.
+Use the `time` query string parameter to specify a date and time. The `time` parameter should be in ISO 8601 format. E.g. `2020-02-27T01:23:45-05:00`.
 
 If the `time` parameter is omitted, the current time is used.
-
-::: warning Note
-Our pricing is structured around what data you need. This results in different plans with different levels of access. The `time` parameter is not accessible on all plans. [Contact our team for more details](https://www.tradinghours.com/contact).
-:::
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
 | local-time | ISO 8601 | The current local time at the market. |
-| status | String | "Open" displays if it is currently a primary trading session. "Closed" will show otherwise, including for pre- and post-trading sessions. |
+| status | String | `Open` if it is currently a primary trading session. `Closed` otherwise, including for pre- and post-trading sessions. |
 | reason | String | Explanation of the current response, including phase(s), holidays, and irregular schedules. |
 | until | ISO 8601 | Displays the end of the current phase. |
 | next_bell | ISO 8601 | Displays the time when the market opens or closes next. |

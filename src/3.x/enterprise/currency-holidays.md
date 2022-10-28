@@ -8,13 +8,14 @@ Currency Settlement Holidays are dates when the central bank for a given currenc
 Currency non-settlement dates are frequently public holidays, but not always.
 
 Unlike [market holidays](market-holidays.md), there are no trading schedules associated with currency holidays.
-A currency is either has settlement or does not on a particular date.
+A currency either has settlement or does not on a particular date.
 
 Most currencies settle Monday to Friday, unless there is a currency settlement holiday.
-Some currency have different weekends. Namely, the Israeli Shekel (ILS) has settlement Sunday to Thursday.
+Some currencies have different weekend definitions.
+Namely, the Israeli Shekel (ILS) has settlement Sunday to Thursday.
 
 The FX market is an Over-The-Counter (OTC) market. This means there is no single centralized exchange where trading takes place.
-Instead, trading takes directly between banks and on individual brokerage platforms.
+Instead, trading takes place directly between banks and on individual brokerage platforms.
 
 Because the market is OTC, there can still be some trading volume on non-settlement dates.
 

@@ -70,7 +70,7 @@ This API uses <a href="https://en.wikipedia.org/wiki/Query_string" target=_blank
 | latitude | Latitude within the timezone region |
 | longitude | Longitude within the timezone region |
 | comments | Comments, if any |
-| observes_dst | Indicates if this timezone observes Daylight Savings Time at any point throughout the year |
+| observes_dst | Indicates if this timezone observes Daylight Saving Time at any point throughout the year |
 
 ### Example
 ```

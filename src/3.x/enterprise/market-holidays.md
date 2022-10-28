@@ -6,10 +6,6 @@
 
 The Market Holiday API allows you to easily access past and future holiday calendars for all markets based on FinID.
 
-::: warning Note
-Our pricing is structured around what data you need. This results in different plans with different levels of access. The Market Holidays API endpoint is not available on all plans. [Contact our team for more details](https://www.tradinghours.com/contact).
-:::
-
 ::: tip Note
 Unlike our other API endpoints, the market holidays endpoint does <b>not</b> support multiple FinIDs. Instead, it lists all holidays for a single FinID.
 :::

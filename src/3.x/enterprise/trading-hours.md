@@ -4,7 +4,7 @@
 
 ## Overview
 
-There are three API endpoints that provide information on market trading hours. The endpoints provide the same information in different formats. Each endpoint is designed for a different use-cases.
+There are three API endpoints that provide information on market trading hours. The endpoints provide the same information in different formats. Each endpoint is designed for a different use-case.
 
 The APIs are:
 
@@ -13,10 +13,6 @@ The APIs are:
 3. [Simplified Trading Hours API](#simplified-trading-hours-api)
 
 The sections below will explain the intended use-case for each API.
-
-::: warning Note
-Our pricing is structured so you only pay for what you need. Accordingly, the Trading Hours API is not available on all plans. [Contact our team for more details](https://www.tradinghours.com/contact).
-:::
 
 ::: tip Notice
 Unlike our other API endpoints, the trading hours endpoints do not support CSV format or multiple FinIDs. This is due to the nested structure of the API results.

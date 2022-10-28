@@ -19,6 +19,7 @@ Use the market details endpoint to get key information about a market using a Fi
 | acronym | String | The acronym for the market. |
 | asset_type | String | Describes the asset type of the market. |
 | memo | String | A description or additional details about the trading venue. |
+| permanently_closed | Date | Optional field. If a market is permanently closed, this shows the date the market closed. |
 | timezone | String | Gives the timezone the market utilizes in Olson timezone identifier format. |
 
 ### Query String Parameters

@@ -21,7 +21,7 @@ First, you will need to enumerate all time zones. Timezones are in [Olson Timezo
 | ------------- | ------------- | --------- |
 | name | String | Olson timezone identifier. |
 | country_code | ISO 3166 | Two-letter country code. |
-| observes_dst | Boolean | Indicates in true/false if the timezone observes Daylight Savings Time. |
+| observes_dst | Boolean | Indicates in true/false if the timezone observes Daylight Saving Time. |
 
 ### Query String Parameters
 Supported query string parameters are listed in the table below:
@@ -85,16 +85,16 @@ https://api.tradinghours.com/v3/timezones?format=csv
 ```
 
 ## Timezone Transitions
-This API will show the transitions for each timezone, the abbreviations for the timezones, and if they are in Daylight Savings Time or not. This will return all information to help your website or application stay on top of all the various timezone transitions.
+This API shows the transitions for each timezone, the abbreviations for the timezones, and whether the timezone is currently observing Daylight Saving Time or not.
 
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| timestamp | Unix Timestamp | Time when the transition begins, showing in the number of seconds elapsed since January 1, 1970. |
-| time | Datetime | Indicates the time that the transition begins. |
-| offset | Datetime Offset | Offset from UTC in seconds. |
-| is_dst | Boolean | Returns true/false, indicating if the period is Daylight Savings Time or not. |
-| abbreviation | Timzone Abbreviation | Common code used to identify the timezone. |
+| timestamp | Unix Timestamp | Time when the transition begins, showing in the number of seconds elapsed since January 1, 1970 |
+| time | Datetime | Indicates the time that the transition begins |
+| offset | Datetime Offset | Offset from UTC in seconds |
+| is_dst | Boolean | Returns true/false, indicating if the period is Daylight Saving Time or not |
+| abbreviation | Timzone Abbreviation | Common code used to identify the timezone |
 
 ### Query String Parameters
 Supported query string parameters are listed in the table below:

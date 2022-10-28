@@ -23,7 +23,7 @@ This API takes previously-scheduled holidays and half-days into account but does
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
 | local-time | ISO 8601 | The current local time at the market. |
-| status | String | "Open" displays if it is currently a primary trading session. "Closed" will show otherwise, including for pre- and post-trading sessions. |
+| status | String | `Open` if it is currently a primary trading session. `Closed` otherwise, including for pre- and post-trading sessions. |
 | reason | String | Explanation of the current response, including phase(s), holidays, and irregular schedules. |
 | until | ISO 8601 | Displays the end of the current phase. |
 | next_bell | ISO 8601 | Displays the time when the market opens or closes next. |
