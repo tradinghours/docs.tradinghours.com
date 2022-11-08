@@ -41,7 +41,7 @@ We recommend that you re-request data once or twice per day to ensure you always
 
 This section explains each of the tables and rows in the bulk download.
 
-### Market Hours
+### Markets
 
 | Field | Description |
 | ------------- | --------- |
@@ -49,11 +49,13 @@ This section explains each of the tables and rows in the bulk download.
 | Market Name | Name of market within the exchange |
 | Security Group | Group of securities with the same trading schedule |
 | Timezone | Timezone of this trading venue (Olson timezone format) |
+| Weekend Definition | Indicates the days of the week when the market regularly closed. "Sat-Sun" for most markets. |
 | FinID | Proprietary code used to uniquely identify trading venues with distinct trading schedules. |
 | MIC | Market Identification Code (ISO10383) |
 | Acronym | Common acronym for the exchange |
 | Asset Type | Description of types of assets traded on this market |
-| Memo | Further description of this market, if required|
+| Memo | Further description of this market, if required |
+| Permanently Closed | Date when the market stopped operations. If empty, the market is not permanently closed. (YYYY-MM-DD) |
 
 ### Holidays
 
