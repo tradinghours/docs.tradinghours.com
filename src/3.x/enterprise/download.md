@@ -41,6 +41,11 @@ We recommend that you re-request data once or twice per day to ensure you always
 
 This section explains each of the tables and rows in the bulk download.
 
+:::warning Notice - Breaking Changes
+Additional fields may be added at anytime without prior notice.
+If a field is removed or renamed, we will release a new version of the API to prevent breaking your integration.
+:::
+
 ### Markets
 
 | Field | Description |

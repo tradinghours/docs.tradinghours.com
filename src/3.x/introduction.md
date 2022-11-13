@@ -55,7 +55,17 @@ Data can be accessed through our API or downloaded in bulk as a zip file. Delive
 
 All data is fully machine-readable and ready for integration into your own application.
 
-## How do I get started?
+## Versioning
+
+Version 3 is the latest API version. Previous versions are still available, but only for existing customers.
+If a breaking change is made to the API, a new version will be released.
+
+A _breaking change_ is if a field in the API response is changed or removed.
+
+We may add fields at anytime. We do not consider adding new fields to be a breaking change.
+Similarly, we may add fields to the CSV and Excel files available through the [bulk download endpoint](/3.x/enterprise/download).
+
+## Getting Started
 
 To get started, <a href="https://www.tradinghours.com/data" target=_blank>request a quote</a>.
 
