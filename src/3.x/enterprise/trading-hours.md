@@ -45,7 +45,7 @@ The `date` will always be converted into the timezone of the specified market.
 
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
+| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
 | phase_name | String | Describes the name for the phase type. |
 | phase_memo | String | If applicable, will have additional description or information. |
 | status | String | Describes what status the market is currently. |
@@ -205,7 +205,7 @@ The Multiple-Day Trading Hours API avoids this problem.
 #### Schedule Schema (Part of Response)
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
+| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
 | phase_name | String | Describes the name for the phase type. |
 | phase_memo | String | If applicable, will have additional description or information. |
 | status | String | Describes what status the market is currently. |
