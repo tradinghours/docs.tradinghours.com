@@ -15,7 +15,7 @@ The APIs are:
 The sections below will explain the intended use-case for each API.
 
 ::: tip Notice
-Unlike our other API endpoints, the trading hours endpoints do not support CSV format or multiple FinIDs. This is due to the nested structure of the API results.
+Unlike our other API endpoints, the trading hours endpoints do not support bulk requests with multiple FinIDs or markets. This is due to the nested structure of the API results.
 :::
 
 ## Single-Day Trading Hours API

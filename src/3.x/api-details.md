@@ -25,18 +25,6 @@ https://api.tradinghours.com/v3/markets/details?fin_id=us.nyse
 https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
 ```
 
-## Formats
-
-The API supports JSON format and CSV format for most requests. By default, if left unspecified, the response format is JSON.
-
-To get a response in CSV format, use the query string parameter `format` to specify the output format.
-
-```
-https://api.tradinghours.com/v3/markets?format=csv
-```
-
-Not all endpoints support returning data in CSV format.
-
 ## Rate Limits
 
 The API has rate limits to ensure system resources are available to all customers and to prevent excessive API usage.

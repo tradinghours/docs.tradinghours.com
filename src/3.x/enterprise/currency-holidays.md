@@ -41,10 +41,6 @@ Remember to use your [authentication token](../authentication.md) for all reques
 https://api.tradinghours.com/v3/currencies
 ```
 
-```
-https://api.tradinghours.com/v3/currencies?format=csv
-```
-
 ### Sample JSON Response
 
 ```json
@@ -104,7 +100,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | currency_code | N/A | String | 3-letter code of the currency (ISO 4217). |
-| format | CSV, JSON | JSON | Specify output format |
 | start | yyyy-mm-dd | Current date | Show holidays starting at this date |
 | end | yyyy-mm-dd | One year from current date | Show holidays until this date. |
 
@@ -114,11 +109,6 @@ Remember to use your [authentication token](../authentication.md) for all reques
 #### Get Holidays
 ```
 https://api.tradinghours.com/v3/currencies/holidays?currency_code=usd
-```
-
-#### Get Holidays in CSV Format
-```
-https://api.tradinghours.com/v3/currencies/holidays?currency_code=usd&format=csv
 ```
 
 #### Get Holidays in a Date Range

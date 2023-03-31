@@ -39,7 +39,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
-| format | CSV, JSON | JSON | Specify output format |
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
@@ -59,10 +58,6 @@ https://api.tradinghours.com/v3/markets?group=core
 https://api.tradinghours.com/v3/markets?group=extended
 ```
 
-#### Get All Markets in CSV Format
-```
-https://api.tradinghours.com/v3/markets?format=csv
-```
 
 ### Sample JSON Response
 ``` json
@@ -120,7 +115,6 @@ Supported query string parameters are listed in the table below:
 | ------------- | ------------- | --------- | --------- |
 | q | Any | N/A | Free-form search field |
 | group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
-| format | CSV, JSON | JSON | Specify output format |
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.

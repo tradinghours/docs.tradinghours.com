@@ -41,7 +41,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for |
-| format | CSV, JSON | JSON | Specify output format |
 
 ### Caching
 
@@ -66,12 +65,6 @@ http://api.tradinghours.com/v3/markets/status?fin_id=XNYS
 
 ```
 http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
-```
-
-#### Get Details in CSV Format
-
-```
-http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&format=csv
 ```
 
 ### Sample JSON Responses

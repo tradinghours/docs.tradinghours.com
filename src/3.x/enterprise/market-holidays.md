@@ -28,7 +28,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | fin_id | Valid FinID | N/A | Specify which market to show data for. |
-| format | CSV, JSON | JSON | Specify output format |
 | start | yyyy-mm-dd | Current date | Show holidays starting at this date |
 | end | yyyy-mm-dd | One year from current date | Show holidays until this date. |
 
@@ -45,11 +44,6 @@ https://api.tradinghours.com/v3/markets/holidays?fin_id=us.nyse
 #### Get Holidays with MIC
 ```
 https://api.tradinghours.com/v3/markets/holidays?fin_id=XNYS
-```
-
-#### Get Holidays in CSV Format
-```
-https://api.tradinghours.com/v3/markets/holidays?fin_id=us.nyse&format=csv
 ```
 
 #### Get Holidays in a Date Range

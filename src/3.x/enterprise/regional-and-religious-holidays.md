@@ -21,24 +21,12 @@ To get the information on regional and religious holidays, you'll first need to 
 | name | String | Full name of the country or religion. |
 | type | String | Either "regional" or "religious." |
 
-### Query String Parameters
-Supported query string parameters are listed in the table below:
-
-| Parameter | Supported Values | Default | Description |
-| ------------- | ------------- | --------- | --------- |
-| format | CSV, JSON | JSON | Specify output format |
-
 ### Example
 Remember to use your [authentication token](../authentication.md) for all requests.
 
 #### List All Calendars
 ```
 https://api.tradinghours.com/v3/calendars
-```
-
-#### List All Markets in CSV Format
-```
-https://api.tradinghours.com/v3/calendars?format=csv
 ```
 
 ### Sample JSON Response
@@ -98,7 +86,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | calendar | Valid Calendar ID | N/A | Specify which calendar to show data for. |
-| format | CSV, JSON | JSON | Specify output format |
 | start | yyyy-mm-dd | Current date | Show holidays starting at this date |
 | end | yyyy-mm-dd | One year from current date | Show holidays until this date. |
 
@@ -108,11 +95,6 @@ Remember to use your [authentication token](../authentication.md) for all reques
 #### Get Holidays
 ```
 https://api.tradinghours.com/v3/calendars/holidays?calendar=US
-```
-
-#### Get Holidays in CSV Format
-```
-https://api.tradinghours.com/v3/calendars/holidays?calendar=US&format=csv
 ```
 
 #### Get Holidays in a Date Range

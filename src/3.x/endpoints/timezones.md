@@ -23,13 +23,6 @@ First, you will need to enumerate all time zones. Timezones are in [Olson Timezo
 | country_code | ISO 3166 | Two-letter country code. |
 | observes_dst | Boolean | Indicates in true/false if the timezone observes Daylight Saving Time. |
 
-### Query String Parameters
-Supported query string parameters are listed in the table below:
-
-| Parameter | Supported Values | Default | Description |
-| ------------- | ------------- | --------- | --------- |
-| format | CSV, JSON | JSON | Specify output format |
-
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
 
@@ -37,11 +30,6 @@ Remember to use your [authentication token](../authentication.md) for all reques
 #### Enumerate All Timezones
 ```
 https://api.tradinghours.com/v3/timezones
-```
-
-#### Enumerate Timezones in CSV Format
-```
-https://api.tradinghours.com/v3/timezones?format=csv
 ```
 
 ### Sample JSON Response
@@ -102,7 +90,6 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | timezone | Timezone name | N/A | <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target=_blank>Full list of timezones on Wikipedia</a> |
-| format | CSV, JSON | JSON | Specify output format |
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
@@ -116,11 +103,6 @@ https://api.tradinghours.com/v3/timezones/transitions?timezone=america/new_york
 #### Get Timezone Transition for New York Between Dates
 ```
 https://api.tradinghours.com/v3/timezones/transitions?timezone=america/new_york&start=2020-01-01&end=2025-12-31
-```
-
-#### Get Timezone Transition for New York in CSV Format
-```
-https://api.tradinghours.com/v3/timezones/transitions?timezone=america/new_york&format=csv
 ```
 
 ### Sample JSON Response
