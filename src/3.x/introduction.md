@@ -24,6 +24,8 @@ After data is collected, our research team continuously monitors markets for sch
 
 We cover over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
 
+**If we are missing a market you need we'll add it at no additional cost.**
+
 Data includes:
 - Trading holidays
 - Non-settlement dates
@@ -51,7 +53,7 @@ Custom packages are also available.
 
 ## Data Delivery
 
-Data can be accessed through our API or downloaded in bulk as a zip file. Delivery formats through the API are JSON and CSV. Bulk flat file downloads are in CSV and Excel format.
+Data can be accessed through our API or [downloaded in bulk](/3.x/enterprise/download) as a zip file. Delivery formats through the API are JSON and CSV. Bulk flat file downloads are in CSV and Excel format.
 
 All data is fully machine-readable and ready for integration into your own application.
 
@@ -67,5 +69,5 @@ Similarly, we may add fields to the CSV and Excel files available through the [b
 
 ## Getting Started
 
-To get started, <a href="https://www.tradinghours.com/data" target=_blank>request a quote</a>.
+To get started, <a href="https://www.tradinghours.com/data#quote-request" target=_blank>contact us</a>.
 
