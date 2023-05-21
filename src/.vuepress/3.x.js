@@ -5,6 +5,7 @@ module.exports = [
             '/3.x/introduction',
             '/3.x/authentication',
             '/3.x/api-details',
+            '/change-log',
         ],
     }, {
         title: "Market Status API",

@@ -67,7 +67,9 @@ A _breaking change_ is if a field in the API response is changed or removed.
 We may add fields at anytime. We do not consider adding new fields to be a breaking change.
 Similarly, we may add fields to the CSV and Excel files available through the [bulk download endpoint](/3.x/enterprise/download).
 
-## Getting Started
+Changed will be documented in the [change log](/change-log).
+
+## Request Access
 
 To get started, <a href="https://www.tradinghours.com/data#quote-request" target=_blank>contact us</a>.
 

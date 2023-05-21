@@ -38,6 +38,7 @@ export default defineUserConfig({
       { text: 'TradingHours.com', link: 'https://www.tradinghours.com/dashboard' },
     ],
     sidebar: {
+      '/': require('./3.x'),
       '/3.x/': require('./3.x'),
     },
   }),

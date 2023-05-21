@@ -61,6 +61,7 @@ If a field is removed or renamed, we will release a new version of the API to pr
 | Asset Type | Description of types of assets traded on this market |
 | Memo | Further description of this market, if required |
 | Permanently Closed | Date when the market stopped operations. If empty, the market is not permanently closed. (YYYY-MM-DD) |
+| Replaced By | If a market is permanently closed this field may contain the FinID of another market that replaced it. |
 
 ### Holidays
 
@@ -74,6 +75,7 @@ If a field is removed or renamed, we will release a new version of the API to pr
 | Observed | Indicates if a holiday officially falls on another date but the market is closed in observance. |
 | Memo | Further description of this market, if required |
 | Status | Indicates if the market is open or closed. Only options are "Open" or "Closed". "Open" indicates that there is a "Primary Trading Session" on this date and the market publishes a closing price. In most cases the "Status" can be derived from "Schedule" field. If the "Schedule" field is anything other than "Closed" then the market is open. However, this is not always the case. For example, an irregular schedule can include only a pre-open session on a particular date. We do not consider this "open" because there is no primary trade session or settlement price published. This sometimes occurs with derivatives markets that have overnight trading sessions. |
+
 ### Schedules
 
 Each row in the schedules table represents a single phase of the trading day.
