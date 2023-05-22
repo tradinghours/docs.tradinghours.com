@@ -5,8 +5,6 @@
 </a>
 </div>
 
-[![pipeline status](https://gitlab.com/tradinghours/docs/badges/main/pipeline.svg)](https://gitlab.com/tradinghours/docs/-/commits/main)
-
 This repository contains the official documentation for TradingHours.com's API. 
 
 TradingHours.com is the most trusted source for financial reference calendar data and is relied upon by thousands of financial professionals every day, including some of the largest financial institutions in the world.

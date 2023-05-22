@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TradingHours.com API documentation",
   "main": "index.js",
-  "repository": "git@gitlab.com:tradinghours/docs.git",
+  "repository": "git@github.com:tradinghours/docs.tradinghours.com.git",
   "author": "TradingHours.com",
   "license": "Commercial",
   "private": true,

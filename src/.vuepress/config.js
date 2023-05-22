@@ -29,8 +29,8 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: "/assets/logo.png",
-    repo: 'https://gitlab.com/tradinghours/docs',
-    editLinkPattern: ':repo/-/edit/:branch/src/:path',
+    repo: 'https://github.com/tradinghours/docs.tradinghours.com',
+    editLinkPattern: ':repo/edit/:branch/src/:path',
     contributors: false,
     sidebarDepth: 0,
     navbar: [
