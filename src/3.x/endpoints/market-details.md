@@ -20,7 +20,6 @@ Use the market details endpoint to get key information about a market using a Fi
 | asset_type | String | Describes the asset type of the market. |
 | memo | String | A description or additional details about the trading venue. |
 | permanently_closed | Date | Optional. If a market is permanently closed, this shows the date the market closed. |
-| replaced_by | String | Optional. If a market is permanently closed, this column may point to another FinID that replaces it. |
 | timezone | String | Gives the timezone the market utilizes in Olson timezone identifier format. |
 | weekend_definition | String | Indicates the days of the week when the market regularly closed. "Sat-Sun" for most markets. |
 

@@ -2,7 +2,6 @@
 
 ## May 22, 2023
 
-- `replaced_by` field added to [Market Details](/endpoints/market-details) API
 - `Replaced By` column added `Markets` sheet in the [Bulk Download](/enterprise/download) API.
 
 ## May 15, 2023
