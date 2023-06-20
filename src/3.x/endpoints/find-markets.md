@@ -45,7 +45,7 @@ Remember to use your [authentication token](../authentication.md) for all reques
 
 #### Get All Markets
 ```
-https://api.tradinghours.com/v3/markets
+https://api.tradinghours.com/v3/markets?group=all
 ```
 
 #### Get All Core Markets
