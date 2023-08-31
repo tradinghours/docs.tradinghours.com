@@ -119,9 +119,6 @@ https://api.tradinghours.com/v3/currencies/holidays?currency_code=usd&start=2021
 ### Sample JSON Response
 
 ```json
-### Sample JSON Response
-
-```json
 {
   "data": [
     {
