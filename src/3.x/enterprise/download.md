@@ -22,7 +22,8 @@ https://api.tradinghours.com/v3/download
 
 ### How often does data update?
 
-When you first send a request to the `download` endpoint you will get a response saying "Generating download. Check back in a few minutes."
+When you first send a request to the `download` endpoint you will get a JSON response saying "Generating download. Check back in a few minutes."
+The HTTP status code will be [202: Accepted](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202).
 In the background, our system starts generating the ZIP file with all data that you have access to.
 This usually takes 1-2 minutes.
 
@@ -144,4 +145,6 @@ You can download the full list of MIC Codes (with Operating and Segment MICs) fr
 | Currency Code | 3-letter currency code. |
 | Date | Holiday date (YYYY-MM-DD) |
 | Holiday Name | Holiday name |
-| Memo | Additional information about the non-settlement date, if applicable. |
+| Settlement | Indicates if there is currency settlement on this date. |
+| Observed | Indicates if a holiday officially falls on another date but settlement is closed in observance. |
+| Memo | Additional information, if needed |

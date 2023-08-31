@@ -99,7 +99,7 @@ Supported query string parameters are listed in the table below:
 
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
-| currency_code | N/A | String | 3-letter code of the currency (ISO 4217). |
+| currency_code | USD, EUR, etc. | N/A | 3-letter code of the currency (ISO 4217). |
 | start | yyyy-mm-dd | Current date | Show holidays starting at this date |
 | end | yyyy-mm-dd | One year from current date | Show holidays until this date. |
 
