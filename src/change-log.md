@@ -1,5 +1,9 @@
 # Change Log
 
+## August 31, 2023
+
+- If [Bulk Download](/enterprise/download) has not generated your data export yet when a request is received, the API will now respond with a [202](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202) HTTP Status Code, rather than 200.
+
 ## May 22, 2023
 
 - `Replaced By` column added `Markets` sheet in the [Bulk Download](/enterprise/download) API.
