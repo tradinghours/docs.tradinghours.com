@@ -1,16 +1,20 @@
 # Change Log
 
+## September 6, 2023
+
+- Added [Last Updated](/3.x/endpoints/last-updated) API endpoint which allows clients to see when the data was last updated.
+
 ## August 31, 2023
 
-- If [Bulk Download](/enterprise/download) has not generated your data export yet when a request is received, the API will now respond with a [202](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202) HTTP Status Code, rather than 200.
+- If [Bulk Download](/3.x/enterprise/download) has not generated your data export yet when a request is received, the API will now respond with a [202](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202) HTTP Status Code, rather than 200.
 
 ## May 22, 2023
 
-- `Replaced By` column added `Markets` sheet in the [Bulk Download](/enterprise/download) API.
+- `Replaced By` column added `Markets` sheet in the [Bulk Download](/3.x/enterprise/download) API.
 
 ## May 15, 2023
 
-- `Status` column added to the `Holidays` sheet in the [Bulk Download](/enterprise/download) API. This makes it easier to determine if a market is open on a given date without lookup up the corresponding schedule.
+- `Status` column added to the `Holidays` sheet in the [Bulk Download](/3.x/enterprise/download) API. This makes it easier to determine if a market is open on a given date without lookup up the corresponding schedule.
 
 ## March 30, 2023
 
@@ -18,7 +22,7 @@
 
 ## November 8, 2022
 
-- `permanently_closed` field added to [Market Details](/endpoints/market-details) API
-- `Permanently Closed` column added `Markets` sheet in the [Bulk Download](/enterprise/download) API.
-- `weekend_definition` field added to [Market Details](/endpoints/market-details) API
-- `Weekend Definition` column added `Markets` sheet in the [Bulk Download](/enterprise/download) API.
+- `permanently_closed` field added to [Market Details](/3.x/endpoints/market-details) API
+- `Permanently Closed` column added `Markets` sheet in the [Bulk Download](/3.x/enterprise/download) API.
+- `weekend_definition` field added to [Market Details](/3.x/endpoints/market-details) API
+- `Weekend Definition` column added `Markets` sheet in the [Bulk Download](/3.x/enterprise/download) API.

@@ -15,6 +15,7 @@ module.exports = [
             '/3.x/endpoints/market-status',
             '/3.x/endpoints/local-time',
             '/3.x/endpoints/timezones',
+            '/3.x/endpoints/last-updated',
         ],
     }, {
         title: "Enterprise API",
