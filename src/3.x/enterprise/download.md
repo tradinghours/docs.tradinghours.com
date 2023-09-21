@@ -33,10 +33,11 @@ Whenever we update the database, the ZIP file on our server will be deleted.
 On the next request, our system will begin regenerating your ZIP file.
 This ensures you always receive the latest data.
 
-Our research team updates the database almost everyday.
-Frequently the data is updated multiple times per day.
+Use the [Last Updated API endpoint](../endpoints/last-updated.html) to check the data was last updated.
 
-We recommend that you re-request data once or twice per day to ensure you always have the latest data.
+Please <u>do not</u> poll the Bulk Download endpoint to check for updates. Poll the Last Updated endpoint instead.
+
+## Terminology and
 
 ## Data Dictionary
 
@@ -75,7 +76,7 @@ If a field is removed or renamed, we will release a new version of the API to pr
 | Settlement | Indicates if there is trade settlement on this date. |
 | Observed | Indicates if a holiday officially falls on another date but the market is closed in observance. |
 | Memo | Further description of this market, if required |
-| Status | Indicates if the market is open or closed. Only options are "Open" or "Closed". "Open" indicates that there is a "Primary Trading Session" on this date and the market publishes a closing price. In most cases the "Status" can be derived from "Schedule" field. If the "Schedule" field is anything other than "Closed" then the market is open. However, this is not always the case. For example, an irregular schedule can include only a pre-open session on a particular date. We do not consider this "open" because there is no primary trade session or settlement price published. This sometimes occurs with derivatives markets that have overnight trading sessions. |
+| Status | Indicates if the market is open or closed. Options are "Open" or "Closed". <br><br>A market is considered "Open" if there is a Primary Trading Session that <u>ends</u> on that date. |
 
 ### Schedules
 
@@ -87,7 +88,7 @@ Each row in the schedules table represents a single phase of the trading day.
 | Schedule Group | Identifier used to group phases together. If there is no holiday then the “Regular” phase applies. |
 | Schedule Group Memo | Further description of this market, if required |
 | Timezone | Timezone of this trading venue (Olson timezone format) |
-| Phase Type | Normalized name of the trading phase |
+| Phase Type | Normalized name of the trading phase. See [phases](#phases) table. |
 | Phase Name | Free-form name of the phase. This is the name the exchange uses to describe the phase. |
 | Phase Memo | Further description of this market, if required |
 | Days | Days this schedule applies. E.g. Mon-Fri |
@@ -103,6 +104,20 @@ Each row in the schedules table represents a single phase of the trading day.
 | In Force End Date | Indicates when a phase goes into effect or is retired |
 | Season Start | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. |
 | Season End | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. |
+
+### Phases
+
+This table contains a list of possible phase types. Phases include Primary Trading Session, Pre-Trading Session, Post-Trading Session, etc.
+
+In the case of over-night trading sessions, the `status` and `settlement` columns apply to the date the phase <u>ends</u>.
+For example, if a Primary Trading Session opens Sunday night and Monday morning, then Monday would be considered open, but Sunday would be closed.
+
+| Field | Description |
+| ------------- | --------- |
+| Name | Name of the phase |
+| Status | Specifies whether this phase indicates that a market is "open". |
+| Settlement | Specifies whether this phase indicates that there is trade settlement. |
+
 
 ### MIC Mapping
 

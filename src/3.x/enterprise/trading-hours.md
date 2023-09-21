@@ -45,10 +45,10 @@ The `date` will always be converted into the timezone of the specified market.
 
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
-| phase_name | String | Describes the name for the phase type. |
-| phase_memo | String | If applicable, will have additional description or information. |
-| status | String | Describes what status the market is currently. |
+| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Primary Trading Session, No Settlement`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. |
+| phase_name | Free-form name of the phase. This is the name the exchange uses to describe the phase. |
+| phase_memo | Further description of this market, if required |
+| status | String | Indicates if the market is considered "open" or "closed" during this phase. |
 | start | ISO 8601 | The date the market phase type started. |
 | end | ISO 8601 | The scheduled date for the market phase type to end. |
 
@@ -203,12 +203,13 @@ The Multiple-Day Trading Hours API avoids this problem.
 | schedule | See schema below | Nested data of the schedule. |
 
 #### Schedule Schema (Part of Response)
+
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. `Primary Trading Session` is the only session type that is considered "open". `phase_name` is free-form and will match the terminology used by the market itself. |
-| phase_name | String | Describes the name for the phase type. |
-| phase_memo | String | If applicable, will have additional description or information. |
-| status | String | Describes what status the market is currently. |
+| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Primary Trading Session, No Settlement`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. |
+| phase_name | Free-form name of the phase. This is the name the exchange uses to describe the phase. |
+| phase_memo | Further description of this market, if required |
+| status | String | Indicates if the market is considered "open" or "closed" during this phase. |
 | start | ISO 8601 | The date the market phase type started. |
 | end | ISO 8601 | The scheduled date for the market phase type to end. |
 
