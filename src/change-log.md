@@ -1,5 +1,9 @@
 # Change Log
 
+## September 21, 2023
+
+- Add [Phases](/3.x/enterprise/download.html#phases) table to the [Bulk Download](/3.x/enterprise/download) API.
+
 ## September 6, 2023
 
 - Added [Last Updated](/3.x/endpoints/last-updated) API endpoint which allows clients to see when the data was last updated.

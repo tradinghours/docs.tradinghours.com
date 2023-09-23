@@ -37,8 +37,6 @@ Use the [Last Updated API endpoint](../endpoints/last-updated.html) to check the
 
 Please <u>do not</u> poll the Bulk Download endpoint to check for updates. Poll the Last Updated endpoint instead.
 
-## Terminology and
-
 ## Data Dictionary
 
 This section explains each of the tables and rows in the bulk download.
