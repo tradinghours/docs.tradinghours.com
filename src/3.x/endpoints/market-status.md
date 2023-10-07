@@ -54,17 +54,17 @@ Remember to use your [authentication token](../authentication.md) for all reques
 #### Get Details for Single FinID
 
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse
+https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse
 ```
 #### Get Details for Single MIC
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=XNYS
+https://api.tradinghours.com/v3/markets/status?fin_id=XNYS
 ```
 
 #### Get Details for Bulk FinIDs
 
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
+https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
 ```
 
 ### Sample JSON Responses

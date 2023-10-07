@@ -47,17 +47,17 @@ Remember to use your [authentication token](../authentication.md) for all reques
 
 #### Get Details for Single FinID with Defined Time
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse&time=2020-11-27T12:55:00-04:00
+https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse&time=2020-11-27T12:55:00-04:00
 ```
 #### Get Details for Single MIC with Defined Time
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=XNYS&time=2020-11-27T12:55:00-04:00
+https://api.tradinghours.com/v3/markets/status?fin_id=XNYS&time=2020-11-27T12:55:00-04:00
 ```
 
 #### Get Details for Bulk FinIDs with Defined Time
 
 ```
-http://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&time=2020-11-27T12:55:00-04:00
+https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx&time=2020-11-27T12:55:00-04:00
 ```
 
 ### Sample JSON Response
