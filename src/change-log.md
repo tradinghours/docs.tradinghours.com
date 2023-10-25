@@ -14,7 +14,7 @@
 
 ## May 22, 2023
 
-- `Replaced By` column added `Markets` sheet in the [Bulk Download](/3.x/enterprise/download) API.
+- `Replaced By` column added to the `Markets` sheet in the [Bulk Download](/3.x/enterprise/download) API.
 
 ## May 15, 2023
 
