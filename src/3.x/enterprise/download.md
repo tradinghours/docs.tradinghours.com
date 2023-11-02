@@ -100,8 +100,8 @@ Each row in the schedules table represents a single phase of the trading day.
 | Max End | Indicates random start/stop times |
 | In Force Start Date | Indicates when a phase goes into effect or is retired |
 | In Force End Date | Indicates when a phase goes into effect or is retired |
-| Season Start | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. |
-| Season End | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. |
+| Season Start | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. See [Season Definitions](#season-definitions) |
+| Season End | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. See [Season Definitions](#season-definitions) |
 
 ### Phases
 
@@ -161,3 +161,15 @@ You can download the full list of MIC Codes (with Operating and Segment MICs) fr
 | Settlement | Indicates if there is currency settlement on this date. |
 | Observed | Indicates if a holiday officially falls on another date but settlement is closed in observance. |
 | Memo | Additional information, if needed |
+
+### Season Definitions
+
+Some schedules change throughout the year. For example, some countries in South America change their schedules in the Summer months to align with US markets during US Daylight Saving Time.
+
+The "Season Start" and "Season End" fields in the [Schedules](#schedules) table are _relative dates_. For example, a season might be "Second Sunday of March". The Season Definitions table will let you look up that date for each year.
+
+| Field | Description |
+| ------------- | --------- |
+| Season | Relative date string |
+| Year | YYYY |
+| Date | YYYY-MM-DD |

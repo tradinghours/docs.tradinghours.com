@@ -19,6 +19,19 @@ You can use these details to:
 This API takes previously-scheduled holidays and half-days into account but does **not** factor in circuit breakers or halts.
 :::
 
+### Visualization Examples
+
+<img src="../../images/phone-countdowns.png" style="max-height: 400px;">
+<br>
+<img src="../../images/countdown-nyse.png" style="border:1px solid black;" >
+<br>
+<br>
+<img src="../../images/countdown-jpx.png" style="border:1px solid black;" >
+<br>
+<br>
+<img src="../../images/countdowns.png" style="border:1px solid black;" >
+
+
 ### Schema
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
@@ -40,7 +53,16 @@ Supported query string parameters are listed in the table below:
 
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
-| fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for |
+| fin_id | Valid FinID(s) | N/A | Specify which market(s) to show data for. |
+| time | ISO 8601 | Current time | **Enterprise Only** - Specify the time that you'd like the information for. |
+
+### Past & Future Times (Enterprise only)
+
+Use the `time` query string parameter to specify a date and time. The `time` parameter should be in ISO 8601 format. E.g. `2020-02-27T01:23:45-05:00`.
+
+If the `time` parameter is omitted, the current time is used.
+
+The `time` parameter can only be used by clients with access to the [Market Holidays](/3.x/enterprise/market-holidays) and [Trading Hours](/3.x/enterprise/trading-hours) data.
 
 ### Caching
 
@@ -62,9 +84,13 @@ https://api.tradinghours.com/v3/markets/status?fin_id=XNYS
 ```
 
 #### Get Details for Bulk FinIDs
-
 ```
 https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
+```
+
+#### Get Details with Defined Time
+```
+https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse&time=2020-11-27T12:55:00-04:00
 ```
 
 ### Sample JSON Responses

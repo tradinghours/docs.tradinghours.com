@@ -1,5 +1,9 @@
 # Change Log
 
+## November 2, 2023
+
+- Add [Season Definitions](/3.x/enterprise/download.html#season-definitions) table to the [Bulk Download](/3.x/enterprise/download) API.
+
 ## September 21, 2023
 
 - Add [Phases](/3.x/enterprise/download.html#phases) table to the [Bulk Download](/3.x/enterprise/download) API.

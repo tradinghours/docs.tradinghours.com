@@ -20,7 +20,6 @@ module.exports = [
     }, {
         title: "Enterprise API",
         children: [
-            '/3.x/enterprise/market-status',
             '/3.x/enterprise/trading-hours',
             '/3.x/enterprise/market-holidays',
             '/3.x/enterprise/currency-holidays',
