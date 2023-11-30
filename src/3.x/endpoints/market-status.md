@@ -23,13 +23,13 @@ This API takes previously-scheduled holidays and half-days into account but does
 
 <img src="../../images/phone-countdowns.png" style="max-height: 400px;">
 <br>
-<img src="../../images/countdown-nyse.png" style="border:1px solid black;" >
+<img src="../../images/countdown-nyse.png" style="border:1px solid black;">
 <br>
 <br>
-<img src="../../images/countdown-jpx.png" style="border:1px solid black;" >
+<img src="../../images/countdown-jpx.png" style="border:1px solid black;">
 <br>
 <br>
-<img src="../../images/countdowns.png" style="border:1px solid black;" >
+<img src="../../images/countdowns.png" style="border:1px solid black;">
 
 
 ### Schema
