@@ -1,9 +1,10 @@
-import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { defineUserConfig } from 'vuepress/cli'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
   lang: 'en-US',
+
   title: 'TradingHours API Docs',
   description: 'The most trusted source for financial calendar reference data',
   head: [
@@ -26,16 +27,13 @@ export default defineUserConfig({
         })(window,document,'script','dataLayer','GTM-T5J2ZQM');
     `]
   ],
-
   theme: defaultTheme({
     logo: "/assets/logo.png",
-    repo: 'https://github.com/tradinghours/docs.tradinghours.com',
-    editLinkPattern: ':repo/edit/:branch/src/:path',
     contributors: false,
     sidebarDepth: 0,
     navbar: [
-
       { text: 'TradingHours.com', link: 'https://www.tradinghours.com/dashboard' },
+      { text: 'Python Library', link: 'https://github.com/tradinghours/tradinghours-python' },
     ],
     sidebar: {
       '/': require('./3.x'),
@@ -43,13 +41,5 @@ export default defineUserConfig({
     },
   }),
 
-  plugins: [
-    searchPlugin({
-      locales: {
-        '/': {
-          placeholder: 'search',
-        },
-      },
-    }),
-  ],
+  bundler: viteBundler(),
 })

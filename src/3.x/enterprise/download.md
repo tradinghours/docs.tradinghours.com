@@ -46,6 +46,11 @@ Additional fields may be added at anytime without prior notice.
 If a field is removed or renamed, we will release a new version of the API to prevent breaking your integration.
 :::
 
+:::tip Having Trouble?
+Having trouble working with the data in flat file format?
+Check out our [python library](/python-library.html). The library runs on top of the bulk download files and simplifies the task of interpreting the data.
+:::
+
 ### Markets
 
 | Field | Description |
