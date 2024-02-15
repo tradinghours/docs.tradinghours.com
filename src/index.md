@@ -21,5 +21,5 @@ features:
   - title: Global Market Coverage
     details: All global markets and financial centers are supported.
 
-footer: © 2015 - 2023 TradingHours.com, LLC. All rights reserved.
+footer: © 2015 - 2024 TradingHours.com, LLC. All rights reserved.
 ---
