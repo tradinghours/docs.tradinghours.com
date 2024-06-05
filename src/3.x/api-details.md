@@ -55,14 +55,39 @@ There are several techniques to avoid exceeding the rate limit listed below:
 https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx,gb.lse
 ```
 
+## Status Codes
+
+Below is a list detailing HTTP Status Codes that may be returned from our API.
+
+- **200 - Ok**
+	- Request was successful.
+
+- **202 - Accepted**
+	- Used when attempting to download the data in bulk, but the bulk download file has not been generated yet. [More details »](./enterprise/download.md#how-often-does-data-update)
+
+- **401 - Unauthorized**
+	- Unable to authenticate the API request. Most likely an API key was not provided. [Details »](./authentication.md)
+
+- **403 - Forbidden**
+	- Your API request was authenticated properly; however, you do not have access to the requested resource.
+
+- **422 - Unprocessable Entity**
+	- Something about your request was malformed. For example, you may be missing a required parameter. More details will be provided in the error message.
+
+- **500 - Internal Server Error**
+	- Indicates there was a critical error. [Contact us immediately](https://www.tradinghours.com/contact).
+
+- **503 - Service Unavailable**
+	- Indicates the API is down for maintenance. Rarely used. Scheduled downtime will be announced well in advance.
+
 ## CORS Policy
 
-The TradingHours.com API does not support Cross Origin Request Sharing (CORS).
-This means you cannot send a request to our API from the front-end Javascript of a website.
+The TradingHours.com API does not support Cross-Origin Resource Sharing (CORS).
+This means you cannot send a request to our API from the front-end JavaScript of a website.
 We do not allow this because it would expose your API key to everyone using your website.
 
-If you see an error saying your request "has been blocked by CORS policy" or there is "no 'Access-Control-Allow-Origin' header is present" then this is the problem.
+If you see an error stating your request "has been blocked by CORS policy" or that there is "no 'Access-Control-Allow-Origin' header present," this is the problem.
 
-Instead of sending the request from your website's Javascript, you should send the API request from your back-end server.
+Instead of sending the request from your website's JavaScript, you should send the API request from your back-end server.
 
-Learn more about <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target=_blank>Cross Origin Request Sharing</a>.
+Learn more about <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target=_blank>Cross-Origin Resource Sharing</a>.
