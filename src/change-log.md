@@ -1,5 +1,9 @@
 # Change Log
 
+## June 6, 2024
+
+- Remove redundant `time`, `utc_time`, and `local-time` fields from the [Market Status API](/3.x/endpoints/market-status) and add `timezone` field.
+
 ## November 2, 2023
 
 - Add [Season Definitions](/3.x/enterprise/download.html#season-definitions) table to the [Bulk Download](/3.x/enterprise/download) API.
