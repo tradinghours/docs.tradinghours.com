@@ -65,6 +65,9 @@ Below is a list detailing HTTP Status Codes that may be returned from our API.
 - **202 - Accepted**
 	- Used when attempting to download the data in bulk, but the bulk download file has not been generated yet. [More details »](./enterprise/download.md#how-often-does-data-update)
 
+- **304 - Not Modified**
+	- Used when the request includes appropriate `If-None-Match` or `If-Modified-Since` headers, and the cached version of the API response on the client's side remains unchanged.
+
 - **401 - Unauthorized**
 	- Unable to authenticate the API request. Most likely an API key was not provided. [Details »](./authentication.md)
 
