@@ -6,7 +6,7 @@ export default defineUserConfig({
   lang: 'en-US',
 
   title: 'TradingHours API Docs',
-  description: 'The most trusted source for financial calendar reference data',
+  description: 'The most comprehensive solution for market holidays and trading hours data.',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     [

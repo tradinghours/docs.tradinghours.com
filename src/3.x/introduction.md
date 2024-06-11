@@ -4,7 +4,7 @@
 
 ## Welcome to TradingHours.com
 
-TradingHours.com is the most trusted source for financial calendar reference data. All data is carefully researched and verified using only primary sources.
+TradingHours.com is the most comprehensive solution for market holidays and trading hours data and is relied upon by thousands of financial professionals every day, including some of the largest financial institutions in the world.
 
 ## Why TradingHours.com?
 
@@ -32,7 +32,8 @@ Data includes:
 - Currency / FX holidays
 - Partial and irregular schedules
 - Detailed trading phase information
-- Fully support for timezones and daylight savings transitions
+- Auction times, pre- and post-trading hours, settlement windows, etc.
+- Full support for timezones and daylight savings transitions
 
 ## Data Licensing
 

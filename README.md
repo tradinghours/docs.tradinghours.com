@@ -7,7 +7,7 @@
 
 This repository contains the official documentation for TradingHours.com's API. 
 
-TradingHours.com is the most trusted source for financial reference calendar data and is relied upon by thousands of financial professionals every day, including some of the largest financial institutions in the world.
+TradingHours.com is the most comprehensive solution for market holidays and trading hours data and is relied upon by thousands of financial professionals every day, including some of the largest financial institutions in the world.
 
 The API allows you to integrate detailed market holidays and trading hours information into your own system.
 
