@@ -1,5 +1,9 @@
 # Change Log
 
+## June 20, 2024
+
+- Add `Closing Price` field to the [Phase Types](/3.x/enterprise/download.html#phase-types) table of [Bulk Download](/3.x/enterprise/download) API.
+
 ## June 6, 2024
 
 - Remove redundant `time`, `utc_time`, and `local-time` fields from the [Market Status API](/3.x/endpoints/market-status) and add `timezone` field.

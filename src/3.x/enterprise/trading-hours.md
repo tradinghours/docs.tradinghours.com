@@ -45,7 +45,7 @@ The `date` will always be converted into the timezone of the specified market.
 
 | Field | Format | Description |
 | ------------- | ------------- | --------- |
-| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Primary Trading Session, No Settlement`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. |
+| phase_type | Structured Field | The options for this field are `Primary Trading Session`, `Primary Trading Session, No Settlement`, `Primary Trading Session, No Closing Price`, `Pre-Trading Session`, `Post-Trading Session`, `Pre-Open`, `Pre-Close`, `Call Auction`, `Intermission`, `Trading-at-Last`, `Order Collection Period`, and `Other`. |
 | phase_name | Free-form name of the phase. This is the name the exchange uses to describe the phase. |
 | phase_memo | Further description of this market, if required |
 | status | String | Indicates if the market is considered "open" or "closed" during this phase. |

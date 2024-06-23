@@ -91,7 +91,7 @@ Each row in the schedules table represents a single phase of the trading day.
 | Schedule Group | Identifier used to group phases together. If there is no holiday then the “Regular” phase applies. |
 | Schedule Group Memo | Further description of this market, if required |
 | Timezone | Timezone of this trading venue (Olson timezone format) |
-| Phase Type | Normalized name of the trading phase. See [phases](#phases) table. |
+| Phase Type | Normalized name of the trading phase. See [phase types](#phase-types) table. |
 | Phase Name | Free-form name of the phase. This is the name the exchange uses to describe the phase. |
 | Phase Memo | Further description of this market, if required |
 | Days | Days this schedule applies. E.g. Mon-Fri |
@@ -108,11 +108,11 @@ Each row in the schedules table represents a single phase of the trading day.
 | Season Start | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. See [Season Definitions](#season-definitions) |
 | Season End | Some exchanges have different hours for e.g. winter vs summer. Season fields describe when the phase is active. See [Season Definitions](#season-definitions) |
 
-### Phases
+### Phase Types
 
 This table contains a list of possible phase types. Phases include Primary Trading Session, Pre-Trading Session, Post-Trading Session, etc.
 
-In the case of over-night trading sessions, the `status` and `settlement` columns apply to the date the phase <u>ends</u>.
+In the case of over-night trading sessions, the `status` and `settlement` columns <u>apply to the date the phase ends</u>.
 For example, if a Primary Trading Session opens Sunday night and ends Monday, then Monday would be considered open but Sunday would be closed.
 
 | Field | Description |
@@ -120,6 +120,7 @@ For example, if a Primary Trading Session opens Sunday night and ends Monday, th
 | Name | Name of the phase |
 | Status | Specifies whether this phase indicates that a market is considered "open" during this phase. |
 | Settlement | Specifies whether this phase indicates that there is trade settlement on the given date. |
+| Closing Price | Specifies whether this phase indicates that there is a closing price published at the end of the phase. |
 
 
 ### MIC Mapping
