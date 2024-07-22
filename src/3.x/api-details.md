@@ -108,7 +108,7 @@ Midnight (`00:00:00`) is considered the start of the next day. A trading phase t
 ...
 ```
 
-Notice that the `end` time is next next day. However, trading ends a moment before the next day begins.
+Notice that the `end` time is the next day. However, trading ends a moment before the next day begins.
 
 This means if you [query the API](./enterprise/trading-hours.md#single-day-trading-hours-api) for all trading phases occurring on January 2, the phase beginning on January 1 and ending at `00:00:00` on January 2 will **not** appear.
 
