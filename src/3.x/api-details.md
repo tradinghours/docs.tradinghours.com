@@ -94,3 +94,24 @@ If you see an error stating your request "has been blocked by CORS policy" or th
 Instead of sending the request from your website's JavaScript, you should send the API request from your back-end server.
 
 Learn more about <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target=_blank>Cross-Origin Resource Sharing</a>.
+
+## Start and End Time Conventions
+
+Throughout the API, all `start` times are _inclusive_, and all `end` times are _exclusive_. For example, a market open from `09:30:00` to `16:00:00` closes an instant before `16:00:00`.
+
+Midnight (`00:00:00`) is considered the start of the next day. A trading phase that goes from 6pm to midnight might appear in our API like this:
+
+```json
+...
+"start": "2024-01-01T18:00:00+00:00",
+"end": "2024-01-02T00:00:00+00:00"
+...
+```
+
+Notice that the `end` time is next next day. However, trading ends a moment before the next day begins.
+
+This means if you [query the API](./enterprise/trading-hours.md#single-day-trading-hours-api) for all trading phases occurring on January 2, the phase beginning on January 1 and ending at `00:00:00` on January 2 will **not** appear.
+
+::: tip Note
+Although it may seem unusual for a trading phase to end at midnight, this can occur in markets that cater to investors in different time zones around the world.
+:::
