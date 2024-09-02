@@ -28,10 +28,10 @@ https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx
 ## Rate Limits
 
 The API has rate limits to ensure system resources are available to all customers and to prevent excessive API usage.
-If you exceed the rate limit, you will receive an error message `419: Too many requests`.
+If you exceed the rate limit, you will receive an error message `429: Too many requests`.
 
 The rate limit is **not** intended to restrict access.
-Rate limits can be increased for Enterprise licensees. [Contact support](https://www.tradinghours.com/contact) to increase your rate limit.
+Rate limits can be increased for Enterprise clients. [Contact support](https://www.tradinghours.com/contact) to increase your rate limit.
 
 ::: tip Tip
 You can always check the `X-RateLimit-Limit` and `X-RateLimit-Remaining` response headers to see how many requests you have left.
@@ -55,6 +55,13 @@ There are several techniques to avoid exceeding the rate limit listed below:
 https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx,gb.lse
 ```
 
+- **Python Library**
+	- Use the [Official TradingHours.com Python Library](../python-library) to access the data. The library downloads the data locally. View on [Github](https://github.com/tradinghours/tradinghours-python).
+
+- **Snowflake**
+	- Access the data on the [Snowflake Marketplace](https://app.snowflake.com/marketplace/listing/GZTSZ1CSMLC/tradinghours-com-market-holidays-trading-hours-data).
+
+
 ## Status Codes
 
 Below is a list detailing HTTP Status Codes that may be returned from our API.
@@ -76,6 +83,9 @@ Below is a list detailing HTTP Status Codes that may be returned from our API.
 
 - **422 - Unprocessable Entity**
 	- Something about your request was malformed. For example, you may be missing a required parameter. More details will be provided in the error message.
+
+- **429 - Too Many Requests**
+	- You have exceeded the [rate limit](#rate-limits) for your account.
 
 - **500 - Internal Server Error**
 	- Indicates there was a critical error. [Contact us immediately](https://www.tradinghours.com/contact).
