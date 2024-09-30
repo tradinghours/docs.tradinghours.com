@@ -21,7 +21,7 @@ Because the market is OTC, there can still be some trading volume on non-settlem
 
 ## List Currencies
 
-We support 21 major currencies at this time.
+We support all major currencies.
 
 ### Schema
 | Field | Format | Description |
