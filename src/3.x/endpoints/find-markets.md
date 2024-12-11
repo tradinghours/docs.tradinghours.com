@@ -32,6 +32,9 @@ If you need help determining which FinID to use, <a href="https://www.tradinghou
 | mic | String | The MIC for the market. |
 | asset_type | String | Describes the asset type of the market. |
 | group | String | Describes which market tier the market is included in. |
+| permanently_closed | Date | If a market is permanently closed, this shows the date the market closed. |
+| holidays_min_date | Date | Date of the earliest holiday available for the market. |
+| holidays_max_date | Date | Date of the latest holiday available for the market. |
 
 ### Query String Parameters
 Supported query string parameters are listed in the table below:
@@ -39,6 +42,7 @@ Supported query string parameters are listed in the table below:
 | Parameter | Supported Values | Default | Description |
 | ------------- | ------------- | --------- | --------- |
 | group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
+| include_permanently_closed | Yes, No | No | Whether or not to include permanently closed markets. |
 
 ### Examples
 Remember to use your [authentication token](../authentication.md) for all requests.
@@ -70,7 +74,10 @@ https://api.tradinghours.com/v3/markets?group=extended
             "products": null,
             "mic": "XADS",
             "asset_type": "Securities",
-            "group": "Extended"
+            "group": "Extended",
+            "permanently_closed": null,
+            "holidays_min_date": "2016-01-01",
+            "holidays_max_date": "2027-12-02"
         },
         {
             "fin_id": "AE.DFM",
@@ -79,7 +86,10 @@ https://api.tradinghours.com/v3/markets?group=extended
             "products": null,
             "mic": "XDFM",
             "asset_type": "Securities",
-            "group": "Extended"
+            "group": "Extended",
+            "permanently_closed": null,
+            "holidays_min_date": "2016-01-01",
+            "holidays_max_date": "2027-12-02"
         },
         {
             "fin_id": "AE.NDXB",
@@ -88,7 +98,10 @@ https://api.tradinghours.com/v3/markets?group=extended
             "products": null,
             "mic": "DIFX",
             "asset_type": "Securities",
-            "group": "Extended"
+            "group": "Extended",
+            "permanently_closed": null,
+            "holidays_min_date": "2016-01-01",
+            "holidays_max_date": "2027-12-02"
         },
         ...
     ],

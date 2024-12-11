@@ -22,6 +22,8 @@ Use the market details endpoint to get key information about a market using a Fi
 | permanently_closed | Date | Optional. If a market is permanently closed, this shows the date the market closed. |
 | timezone | String | Gives the timezone the market utilizes in Olson timezone identifier format. |
 | weekend_definition | String | Indicates the days of the week when the market is normally closed. "Sat-Sun" for most markets. |
+| holidays_min_date | Date | Date of the earliest holiday available for the market. |
+| holidays_max_date | Date | Date of the latest holiday available for the market. |
 
 ### Query String Parameters
 Supported query string parameters are listed in the table below:
@@ -63,7 +65,9 @@ https://api.tradinghours.com/v3/markets/details?fin_id=us.nyse,jp.jpx
       "asset_type": null,
       "memo": "All listed equities. Includes MIC XJAS",
       "timezone": "Asia\/Tokyo",
-      "weekend_definition": "Sat-Sun"
+      "weekend_definition": "Sat-Sun",
+      "holidays_min_date": "2000-01-03",
+      "holidays_max_date": "2033-12-26"
     },
     {
       "fin_id": "US.NYSE",
@@ -77,7 +81,10 @@ https://api.tradinghours.com/v3/markets/details?fin_id=us.nyse,jp.jpx
       "asset_type": null,
       "memo": "Canonical",
       "timezone": "America\/New_York",
-      "weekend_definition": "Sat-Sun"
+      "weekend_definition": "Sat-Sun",
+      "weekend_definition": "Sat-Sun",
+      "holidays_min_date": "2000-01-17",
+      "holidays_max_date": "2033-11-25"
     }
   ]
 }

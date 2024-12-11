@@ -1,5 +1,10 @@
 # Change Log
 
+## December 10, 2024
+
+- Add `holidays_min_date` and `holidays_max_date` to the [Find Markets](/3.x/endpoints/find-markets) and [Market Details](/3.x/endpoints/market-details) endpoints.
+- Add `include_permanently_closed` query parameter to the [Find Markets](/3.x/endpoints/find-markets) endpoint.
+
 ## June 20, 2024
 
 - Add `Closing Price` field to the [Phase Types](/3.x/enterprise/download.html#phase-types) table of [Bulk Download](/3.x/enterprise/download) API.
