@@ -17,12 +17,10 @@ As an alternative to using our web-based API directly, there is a Python Library
 This Python Library provides several advantages:
 
 - Fast and easy to integrate trading hours data into your existing applications
-- All data is downloaded at once then runs entirely locally
+- All data is downloaded at once then runs **entirely locally**
 - Because the package runs locally, it is extremely fast and avoids [rate limiting](/3.x/api-details.html#rate-limits)
 - Avoid writing complicated code to interpret [trading hours data](/3.x/enterprise/download.html)
 
 ## Getting Started
 
 To start using the library, view the full code and usage documentation on [GitHub](https://github.com/tradinghours/tradinghours-python).
-
-The package is still in __beta__ as of February 2024. We expect to release version 1.0 later this year.
