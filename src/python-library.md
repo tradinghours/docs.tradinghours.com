@@ -18,8 +18,8 @@ This Python Library provides several advantages:
 
 - Fast and easy to integrate trading hours data into your existing applications
 - All data is downloaded at once then runs **entirely locally**
-- Because the package runs locally, it is extremely fast and avoids [rate limiting](/3.x/api-details.html#rate-limits)
-- Avoid writing complicated code to interpret [trading hours data](/3.x/enterprise/download.html)
+- Because the package runs locally, it is extremely fast and avoids [rate limiting](/3.x/api-details#rate-limits)
+- Avoid writing complicated code to interpret [trading hours data](/3.x/enterprise/download)
 
 ## Getting Started
 

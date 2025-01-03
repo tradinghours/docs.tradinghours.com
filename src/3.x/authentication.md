@@ -38,15 +38,14 @@ https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse&api_token=YOUR_TOK
 Using a "bearer token" is considered more secure as it reduces the chance of inadvertently revealing your API key to unauthorized parties.
 We recommend using this method in your production environment.
 
-:::: code-group
-::: code-group-item Bash
+::: code-group
+
 ```bash
 curl https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse \
     -H "Accept: application/json" \
     -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
-:::
-::: code-group-item PHP
+
 ```php
 $curl = curl_init();
 
@@ -67,8 +66,7 @@ curl_close($curl);
 
 print_r($response);
 ```
-:::
-::: code-group-item Python
+
 ```python
 #!/usr/bin/env python3
 
@@ -85,5 +83,5 @@ response = requests.get(url, headers=headers)
 
 print(response.json())
 ```
+
 :::
-::::

@@ -1,3 +1,4 @@
 /docs /
 /docs/* /:splat
-/3.x/enterprise/market-status.html /3.x/endpoints/market-status.html
+/3.x/enterprise/market-status.html /3.x/endpoints/market-status
+/3.x/enterprise/market-status /3.x/endpoints/market-status

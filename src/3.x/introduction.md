@@ -22,7 +22,7 @@ After data is collected, our research team continuously monitors markets for sch
 
 ## What data is covered?
 
-We cover over 900 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source for standardized financial calendar reference data that includes trading schedules for derivative markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
+We cover over 1,100 unique exchanges and trading venues around the globe, including derivative markets, equities, bonds, options, futures, and currency markets. TradingHours.com is the only source fully machine readable trading hours and market holidays data for all global financial markets. [View All Coverage](https://www.tradinghours.com/data/coverage)
 
 **If we are missing a market you need we'll add it at no additional cost.**
 

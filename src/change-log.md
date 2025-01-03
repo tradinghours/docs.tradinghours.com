@@ -7,7 +7,7 @@
 
 ## June 20, 2024
 
-- Add `Closing Price` field to the [Phase Types](/3.x/enterprise/download.html#phase-types) table of [Bulk Download](/3.x/enterprise/download) API.
+- Add `Closing Price` field to the [Phase Types](/3.x/enterprise/download#phase-types) table of [Bulk Download](/3.x/enterprise/download) API.
 
 ## June 6, 2024
 
@@ -15,11 +15,11 @@
 
 ## November 2, 2023
 
-- Add [Season Definitions](/3.x/enterprise/download.html#season-definitions) table to the [Bulk Download](/3.x/enterprise/download) API.
+- Add [Season Definitions](/3.x/enterprise/download#season-definitions) table to the [Bulk Download](/3.x/enterprise/download) API.
 
 ## September 21, 2023
 
-- Add [Phases](/3.x/enterprise/download.html#phases) table to the [Bulk Download](/3.x/enterprise/download) API.
+- Add [Phases](/3.x/enterprise/download#phases) table to the [Bulk Download](/3.x/enterprise/download) API.
 
 ## September 6, 2023
 
@@ -39,7 +39,7 @@
 
 ## March 30, 2023
 
-- Deprecate the `format` parameter from all APIs. This field is still available with no planned removal date. All APIs still default to returning data in JSON format with the option of passing `format=csv` for CSV format. The [Bulk Download](/enterprise/download) is unchanged and still returns data in both CSV and Excel formats.
+- Deprecate the `format` parameter from all APIs. This field is still available with no planned removal date. All APIs still default to returning data in JSON format with the option of passing `format=csv` for CSV format. The [Bulk Download](/3.x/enterprise/download) is unchanged and still returns data in both CSV and Excel formats.
 
 ## November 8, 2022
 

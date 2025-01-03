@@ -33,7 +33,7 @@ Whenever we update the database, the ZIP file on our server will be deleted.
 On the next request, our system will begin regenerating your ZIP file.
 This ensures you always receive the latest data.
 
-Use the [Last Updated API endpoint](../endpoints/last-updated.html) to check the data was last updated.
+Use the [Last Updated API endpoint](../endpoints/last-updated) to check the data was last updated.
 
 Please <u>do not</u> poll the Bulk Download endpoint to check for updates. Poll the Last Updated endpoint instead.
 
@@ -48,7 +48,7 @@ If a field is removed or renamed, we will release a new version of the API to pr
 
 :::tip Having Trouble?
 Having trouble working with the data in flat file format?
-Check out our [python library](/python-library.html). The library runs on top of the bulk download files and simplifies the task of interpreting the data.
+Check out our [python library](/python-library). The library runs on top of the bulk download files and simplifies the task of interpreting the data.
 :::
 
 ### Markets
