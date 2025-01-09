@@ -22,7 +22,7 @@ export default defineConfig({
   cleanUrls: true,
 
   themeConfig: {
-    logo: '/images/logo.svg',
+    logo: '/assets/logo.svg',
 
     nav: [
       { text: 'TradingHours.com', link: 'https://www.tradinghours.com' },
