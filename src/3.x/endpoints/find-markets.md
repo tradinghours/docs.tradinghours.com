@@ -107,39 +107,3 @@ https://api.tradinghours.com/v3/markets?group=extended
     ],
 }
 ```
-## Lookup / Search Markets
-
-The "Lookup Markets" endpoint allows you to search for markets based on any attribute such as exchange name, market name, security description, MIC, or country.
-
-Each unique trading schedule or trading calendar is identified by a unique "FinID." Most exchanges have several different trading schedules for equities, bonds, futures, etc.
-In total, we track over 900 different trading schedules.
-
-This API allows you to easily search for the exact trading calendar you need.
-
-### Schema
-
-The response schema for the Lookup API is the same as the List Markets API above.
-
-### Query String Parameters
-
-Supported query string parameters are listed in the table below:
-
-| Parameter | Supported Values | Default | Description |
-| ------------- | ------------- | --------- | --------- |
-| q | Any | N/A | Free-form search field |
-| group | Core, Extended, All, Allowed | All | Specify which group of markets to show. "Allowed" will show all markets you are permitted to access. |
-
-### Examples
-Remember to use your [authentication token](../authentication.md) for all requests.
-
-```
-https://api.tradinghours.com/v3/markets/lookup?q=hong+kong
-```
-
-```
-https://api.tradinghours.com/v3/markets/lookup?q=new+york
-```
-
-```
-https://api.tradinghours.com/v3/markets/lookup?q=usd
-```
