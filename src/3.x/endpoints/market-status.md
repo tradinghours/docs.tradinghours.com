@@ -15,8 +15,9 @@ You can use these details to:
 - Activate trading algorithms when markets open
 - Detect market holidays and half-days
 
-::: tip Note
-This API takes previously-scheduled holidays and half-days into account but does **not** factor in circuit breakers or halts.
+
+::: tip Attribution
+Attribution to TradingHours.com, including a clearly visible link, is required when displaying data provided by the Market Status API within your website or application.
 :::
 
 ### Visualization Examples
