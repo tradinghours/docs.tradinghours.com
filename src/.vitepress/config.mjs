@@ -23,42 +23,73 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/assets/logo.svg',
-
+    outline: [2, 4],
     nav: [
       { text: 'TradingHours.com', link: 'https://www.tradinghours.com' },
       { text: 'Python Library', link: 'https://github.com/tradinghours/tradinghours-python' }
     ],
 
-    sidebar: [
-      {
-        text: "Getting Started",
-        items: [
-            { text: 'Introduction', link: '/3.x/introduction' },
-            { text: 'Authentication', link: '/3.x/authentication' },
-            { text: 'API Details', link: '/3.x/api-details' },
-            { text: 'Python Library', link: '/python-library' },
-            { text: 'Change Log', link: '/change-log' },
-        ],
+      sidebar: [
+    {
+      text: "Getting Started",
+      items: [
+          { text: 'Introduction', link: '/3.x/introduction' },
+          { text: 'Authentication', link: '/3.x/authentication' },
+          { text: 'Change Log', link: '/change-log' },
+      ],
       }, {
-        text: "Basic API Endpoints",
-        items: [
+      text: "API Endpoints",
+      items: [
+        { text: 'API Details', link: '/3.x/api-details' },
+        {
+          text: 'Basic',
+          collapsed: false,
+          items: [
             { text: 'Find Markets', link: '/3.x/endpoints/find-markets' },
             { text: 'Market Details', link: '/3.x/endpoints/market-details' },
             { text: 'Market Status', link: '/3.x/endpoints/market-status' },
             { text: 'Local Times', link: '/3.x/endpoints/local-time' },
             { text: 'Timezones', link: '/3.x/endpoints/timezones' },
             { text: 'Last Updated', link: '/3.x/endpoints/last-updated' },
-        ],
-      }, {
-        text: "Enterprise API Endpoints",
-        items: [
+          ]
+        },
+        {
+          text: 'Enterprise',
+          collapsed: false,
+          items: [
             { text: 'Trading Hours', link: '/3.x/enterprise/trading-hours' },
             { text: 'Market Holidays', link: '/3.x/enterprise/market-holidays' },
             { text: 'Currency Holidays', link: '/3.x/enterprise/currency-holidays' },
             { text: 'Regional Holidays', link: '/3.x/enterprise/regional-and-religious-holidays' },
             { text: 'Data Download (CSV)', link: '/3.x/enterprise/download' }
-        ],
-      }
+          ]
+        }
+      ],
+      }, {
+      text: "Python Library",
+      items: [
+          { text: 'Overview', link: '/python-library/' },
+          {
+            text: 'Package Mode',
+            collapsed: false,
+            items: [
+              { text: 'Getting Started', link: '/python-library/package-mode/getting-started' },
+              { text: 'Markets', link: '/python-library/package-mode/markets' },
+              { text: 'Currencies', link: '/python-library/package-mode/currencies' },
+              { text: 'Configuration', link: '/python-library/package-mode/configuration' },
+            ]
+          },
+          { 
+            text: 'Server Mode', 
+            collapsed: false,
+            items: [
+              { text: 'Getting Started', link: '/python-library/server-mode/getting-started' },
+              { text: 'API Endpoints', link: '/python-library/server-mode/api-endpoints' },
+              { text: 'Configuration', link: '/python-library/server-mode/configuration' },
+            ]
+          },
+      ],
+      },
     ],
 
     socialLinks: [
