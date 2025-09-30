@@ -47,7 +47,7 @@ tradinghours serve
 ```
 
 Perfect for:
-- Microservice and Multi-language infrastructure
+- Microservice and multi-language infrastructure
 - Low latency and no rate limits
 - Fully private and on-premise hosting
 
