@@ -56,7 +56,7 @@ https://api.tradinghours.com/v3/markets/status?fin_id=us.nyse,jp.jpx,gb.lse
 ```
 
 - **Python Library**
-	- Use the [Official TradingHours.com Python Library](../python-library) to access the data. The library downloads the data locally. View on [Github](https://github.com/tradinghours/tradinghours-python).
+	- Use the [Official TradingHours.com Python Library](/python-library/) to access the data. The library downloads the data locally. View on [Github](https://github.com/tradinghours/tradinghours-python).
 
 - **Snowflake**
 	- Access the data on the [Snowflake Marketplace](https://app.snowflake.com/marketplace/listing/GZTSZ1CSMLC/tradinghours-com-market-holidays-trading-hours-data).
