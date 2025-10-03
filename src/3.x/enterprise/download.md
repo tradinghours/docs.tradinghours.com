@@ -48,7 +48,7 @@ If a field is removed or renamed, we will release a new version of the API to pr
 
 :::tip Having Trouble?
 Having trouble working with the data in flat file format?
-Check out our [python library](/python-library). The library runs on top of the bulk download files and simplifies the task of interpreting the data.
+Check out our [python library](/python-library/). The library runs on top of the bulk download files and simplifies the task of interpreting the data.
 :::
 
 ### Markets
