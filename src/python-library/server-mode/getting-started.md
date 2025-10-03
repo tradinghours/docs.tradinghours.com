@@ -61,7 +61,7 @@ tradinghours serve --uds /tmp/tradinghours.sock
 Once the server is running, visit these URLs for API documentation:
 
 - **Swagger UI**: http://127.0.0.1:8000/docs
-- **OpenAPI Schema**: http://127.0.0.1:8000/openapi.json
+- **OpenAPI Schema**: http://127.0.0.1:8000/openapi.json ([preview](/th-python-server/openapi.json))
 
 The Swagger UI provides a full interactive interface to test all endpoints.
 

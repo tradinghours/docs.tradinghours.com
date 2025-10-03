@@ -5,7 +5,7 @@
 The server exposes a REST API that mirrors the Python library interface. Once the server is running, visit these URLs for up-to-date API documentation:
 
 - **Swagger UI**: http://127.0.0.1:8000/docs
-- **OpenAPI Schema**: http://127.0.0.1:8000/openapi.json
+- **OpenAPI Schema**: http://127.0.0.1:8000/openapi.json ([preview](/th-python-server/openapi.json))
 
 The Swagger UI provides a full interactive interface to test all endpoints.
 
