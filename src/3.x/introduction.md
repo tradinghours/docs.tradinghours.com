@@ -57,8 +57,13 @@ Custom packages are also available.
 Data can be accessed through our API or [downloaded in bulk](/3.x/enterprise/download) as a zip file. Delivery formats through the API are JSON and CSV. Bulk flat file downloads are in CSV and Excel format.
 
 All data is fully machine-readable and ready for integration into your own application. 
+
 ::: tip Python Library
-The Python library and its ***Server Mode*** allow you to access the flat files in a highly performant and user-friendly way in your own application. [Learn more about the Python library →](https://docs.tradinghours.com/python-library)
+The Python library and its ***Server Mode*** allow you to access the flat files in a highly performant and user-friendly way on your own machine. [Learn more about the Python library →](https://docs.tradinghours.com/python-library)
+:::
+
+::: tip Snowflake
+Alternatively, you can access the data on the [Snowflake Marketplace](https://app.snowflake.com/marketplace/listing/GZTSZ1CSMLC).
 :::
 
 ## Versioning

@@ -8,12 +8,12 @@
 
 ## Two Modes of Operation
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 ### 📦 [Package Mode](https://docs.tradinghours.com/python-library/package-mode/getting-started)
 **Use as a Python package**
+
+<div align="center">
+  <img src="/demos/th-python-demo.gif" alt="TradingHours Package Mode Demo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 1em;">
+</div>
 
 ```bash
 pip install tradinghours
@@ -31,11 +31,15 @@ Perfect for:
 
 **[📖 Get Started →](https://docs.tradinghours.com/python-library/package-mode/getting-started)**
 
-</td>
-<td width="50%" valign="top">
+---
 
 ### 🚀 [Server Mode](https://docs.tradinghours.com/python-library/server-mode/getting-started)
 **Run as REST API server**
+
+<div align="center">
+  <img src="/demos/th-server-demo.gif" alt="TradingHours Server Mode Demo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 1em;">
+</div>
+
 
 ```bash
 pip install tradinghours[server]
@@ -52,10 +56,6 @@ Perfect for:
 - Fully private and on-premise hosting
 
 **[📖 Get Started →](https://docs.tradinghours.com/python-library/server-mode/getting-started)**
-
-</td>
-</tr>
-</table>
 
 ## Requirements
 
