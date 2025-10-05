@@ -37,6 +37,30 @@ export default defineConfig({
           { text: 'Authentication', link: '/3.x/authentication' },
           { text: 'Change Log', link: '/change-log' },
       ],
+    }, {
+      text: "Python Library",
+      items: [
+          { text: 'Overview', link: '/python-library/' },
+          { 
+            text: 'Server Mode', 
+            collapsed: false,
+            items: [
+              { text: 'Getting Started', link: '/python-library/server-mode/getting-started' },
+              { text: 'API Endpoints', link: '/python-library/server-mode/api-endpoints' },
+              { text: 'Configuration', link: '/python-library/server-mode/configuration' },
+            ]
+          },
+          {
+            text: 'Package Mode',
+            collapsed: false,
+            items: [
+              { text: 'Getting Started', link: '/python-library/package-mode/getting-started' },
+              { text: 'Markets', link: '/python-library/package-mode/markets' },
+              { text: 'Currencies', link: '/python-library/package-mode/currencies' },
+              { text: 'Configuration', link: '/python-library/package-mode/configuration' },
+            ]
+          }
+      ],
       }, {
       text: "API Endpoints",
       items: [
@@ -64,30 +88,6 @@ export default defineConfig({
             { text: 'Data Download (CSV)', link: '/3.x/enterprise/download' }
           ]
         }
-      ],
-      }, {
-      text: "Python Library",
-      items: [
-          { text: 'Overview', link: '/python-library/' },
-          {
-            text: 'Package Mode',
-            collapsed: false,
-            items: [
-              { text: 'Getting Started', link: '/python-library/package-mode/getting-started' },
-              { text: 'Markets', link: '/python-library/package-mode/markets' },
-              { text: 'Currencies', link: '/python-library/package-mode/currencies' },
-              { text: 'Configuration', link: '/python-library/package-mode/configuration' },
-            ]
-          },
-          { 
-            text: 'Server Mode', 
-            collapsed: false,
-            items: [
-              { text: 'Getting Started', link: '/python-library/server-mode/getting-started' },
-              { text: 'API Endpoints', link: '/python-library/server-mode/api-endpoints' },
-              { text: 'Configuration', link: '/python-library/server-mode/configuration' },
-            ]
-          },
       ],
       },
     ],

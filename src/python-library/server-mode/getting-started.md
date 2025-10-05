@@ -44,6 +44,11 @@ tradinghours serve [OPTIONS]
 | `--uds` | Unix domain socket path (overrides host/port) | None |
 | `--no-auto-update` | Disable automatic data updates | Enabled |
 
+
+::: warning Authentication
+The server does not have a built-in authentication mechanism. If this is desired, we recommend running the server behind [AWS API Gateway](https://aws.amazon.com/api-gateway/).
+:::
+
 ### Examples
 
 **Listen on all interfaces:**
@@ -55,6 +60,7 @@ tradinghours serve --host 0.0.0.0 --port 8080
 ```bash
 tradinghours serve --uds /tmp/tradinghours.sock
 ```
+
 
 ## API Documentation
 
