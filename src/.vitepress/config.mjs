@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "TradingHours API Docs",
+  title: "TradingHours Docs",
   description: "Official Documentation for TradingHours.com",
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -14,6 +14,10 @@ export default defineConfig({
         })(window,document,'script','dataLayer','GTM-T5J2ZQM');
     `]
   ],
+
+  rewrites: {
+    '3.x/introduction.md': 'index.md'
+  },
 
   sitemap: {
     hostname: 'https://docs.tradinghours.com'
@@ -33,7 +37,7 @@ export default defineConfig({
     {
       text: "Getting Started",
       items: [
-          { text: 'Introduction', link: '/3.x/introduction' },
+          { text: 'Introduction', link: '/' },
           { text: 'Authentication', link: '/3.x/authentication' },
           { text: 'Change Log', link: '/change-log' },
       ],
