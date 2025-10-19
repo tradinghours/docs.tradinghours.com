@@ -12,6 +12,9 @@
     "docs:update-package": "npx vp-update",
     "docs:preview": "vitepress preview src"
   },
+  "dependencies": {
+    "medium-zoom": "^1.1.0"
+  },
   "devDependencies": {
     "vitepress": "^1.5.0",
     "vue": "^3.5.13"
