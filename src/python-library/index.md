@@ -63,23 +63,20 @@ Perfect for:
 - **Subscription**: Active TradingHours.com subscription ([get a quote](https://www.tradinghours.com/data))
 - **API Token**: Available from [your account page](https://www.tradinghours.com/user/api-tokens)
 
-
 ## Advanced
 ### Optional Advanced Configuration
 
 Configuration can be changed by creating a `tradinghours.ini` file in the current directory.
 
-These are possible and optional values. Please see the [package mode](https://docs.tradinghours.com/python-library/package-mode/configuration) or [server mode](https://docs.tradinghours.com/python-library/server-mode/configuration) documentation for more details. *Keep in mind that server mode cannot use custom `[package-mode]` settings and must use the default SQLite database.*
+These are possible and optional values. The [data] configuration applies to both modes and configures the source for `tradinghours import`, which is what the auto-import feature of the server-mode uses in the background. Please see the [server mode](https://docs.tradinghours.com/python-library/package-mode/configuration) for more details.
 
 ```ini
-[auth]
+[data]
 token = YOUR-TOKEN
-
-[package-mode]
-db_url = postgresql://postgres:password@localhost:5432/your_database
-table_prefix = thstore_
+source = https://api.tradinghours.com/v4/download
 
 [server-mode]
+auto_import_frequency = 360 # in minutes; set to 0 to disable auto-import
 allowed_hosts = *
 allowed_origins = *
 log_folder = tradinghours_server_logs
@@ -89,6 +86,69 @@ log_days_to_keep = 7
 [extra]
 check_tzdata = True
 ```
+
+### Data Sources
+
+By default, the library downloads data from the TradingHours.com API. However, you can configure alternative data sources to suit your infrastructure needs.
+
+#### Supported Data Sources
+
+The `source` configuration option supports multiple formats:
+
+##### 1. Default API (HTTPS)
+```ini
+[data]
+token = YOUR-TOKEN
+source = https://api.tradinghours.com/v4/download
+```
+- Uses your API token automatically
+- Efficient ETag-based change detection
+- Downloads latest data from TradingHours.com
+- **This is the default if not specified**
+
+##### 2. Custom HTTPS Endpoint
+```ini
+[data]
+source = https://example.com/data.zip
+```
+- Uses ETag headers for change detection with a HEAD request
+- Falls back to always downloading if headers unavailable
+- Useful for custom data distribution servers
+
+##### 3. Local File
+```ini
+[data]
+source = file:///absolute/path/to/data.zip
+```
+- Uses modification time (mtime) for change detection
+- Works cross-platform (Windows/Unix)
+- Useful for offline development
+- Must be an absolute path
+
+##### 4. S3 Bucket
+```ini
+[data]
+source = s3://bucket/key/data.zip
+```
+- Requires boto3: `pip install tradinghours[s3]`
+- Uses S3 ETag for change detection with a HEAD request
+- AWS credentials need to be set up following the [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+
+#### Change Detection
+
+The library automatically detects data changes using different mechanisms based on the source type:
+
+- **HTTP/HTTPS sources**: Uses ETag from the response of a HEAD request
+- **S3 sources**: Uses S3 ETag from the response of a HEAD request
+- **Local files**: Uses file modification time (mtime)
+
+::: warning Sources Without ETag Support
+If your data source does not support ETag headers, the library will download data and ingest it on every import. If you are using the server-mode, which periodically runs the import in the background, this may cause many redundant imports. To avoid this, set the auto_import_frequency to an appropriate value. See the [server mode configuration](https://docs.tradinghours.com/python-library/server-mode/configuration#automatic-data-updates) for details.
+:::
+
+For server mode specific configuration instructions, see:
+- [Server Mode Configuration](https://docs.tradinghours.com/python-library/server-mode/configuration)
+
 
 ### Time Zones
 This package employs `zoneinfo` for timezone management, utilizing the IANA Time Zone Database, 
@@ -103,8 +163,6 @@ To disable this verification and prevent the request, add this section to your t
 [extra]
 check_tzdata = False
 ```
-
-
 
 ## Support & Resources
 

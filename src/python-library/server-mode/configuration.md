@@ -4,10 +4,11 @@
 Create a `tradinghours.ini` file to customize server behavior:
 
 ```ini
-[auth]
+[data]
 token = YOUR-API-TOKEN
 
 [server-mode]
+auto_import_frequency = 360
 allowed_hosts = *
 allowed_origins = *
 log_folder = tradinghours_server_logs
@@ -19,6 +20,7 @@ log_days_to_keep = 7
 
 | Setting | Description | Default |
 |---------|-------------|---------|
+| `auto_import_frequency` | Frequency (in minutes) to check for and import new data. Set to `0` to disable. | `360` (6 hours) |
 | `allowed_hosts` | Comma-separated list of allowed hosts. Use `*` for all. | `*` |
 | `allowed_origins` | Comma-separated list of allowed CORS origins. Use `*` for all. | `*` |
 | `log_folder` | Directory for log files with daily rotation | `tradinghours_server_logs` |
@@ -44,11 +46,27 @@ Then configure your client to connect via the socket instead of TCP.
 
 ## Automatic Data Updates
 
-By default, the server checks every minute if new data is available and automatically runs `tradinghours import` when updates are detected. You can disable this feature by running the server with the `--no-auto-update` flag.
+By default, the server checks for new data every 6 hours (360 minutes) and automatically runs `tradinghours import` when updates are detected. You can customize this behavior using the `auto_import_frequency` setting in your `tradinghours.ini` file.
 
-```bash
-tradinghours serve --no-auto-update
+To change the update frequency:
+```ini
+[server-mode]
+auto_import_frequency = 120  # Check every 2 hours
 ```
+
+To disable automatic updates:
+```ini
+[server-mode]
+auto_import_frequency = 0  # Disable automatic updates
+```
+
+::: tip Change Detection
+The library uses efficient change detection (ETag for HTTP/S3 sources, mtime for local files) to avoid unnecessary downloads. See the [Data Sources](https://docs.tradinghours.com/python-library/#data-sources) section for details.
+:::
+
+::: warning Sources Without ETag Support
+If your data source does not support ETag headers (e.g., custom servers), the library will download data on every check. In this case, make sure `auto_import_frequency` is set to an appropriate value to avoid excessive downloads and bandwidth usage.
+:::
 
 ## Logs
 
