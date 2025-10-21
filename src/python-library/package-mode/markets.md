@@ -72,9 +72,9 @@ market.pprint()
  'memo': 'Canonical',
  'permanently_closed': None,
  'replaced_by': None,
- 'country_code': 'US',
- 'first_available_date': '2000-01-01',
- 'last_available_date': '2033-12-31'}
+ 'holidays_min_date': '2000-01-17',
+ 'holidays_max_date': '2033-12-26',
+ 'country_code': 'US'}
 ```
 
 ### Permanently Closed Markets

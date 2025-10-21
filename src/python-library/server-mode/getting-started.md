@@ -42,7 +42,6 @@ tradinghours serve [OPTIONS]
 | `--host` | Host to bind to | `127.0.0.1` |
 | `--port` | Port to bind to | `8000` |
 | `--uds` | Unix domain socket path (overrides host/port) | None |
-| `--no-auto-update` | Disable automatic data updates | Enabled |
 
 
 ::: warning Authentication

@@ -67,8 +67,8 @@ Response:
     "memo": "Canonical",
     "permanently_closed": null,
     "replaced_by": null,
-    "country_code": "US",
-    "first_available_date": "2000-01-01",
-    "last_available_date": "2033-12-31"
+    "country_code":"US",
+    "holidays_min_date":"2000-01-17",
+    "holidays_max_date":"2033-12-26"
 }
 ```

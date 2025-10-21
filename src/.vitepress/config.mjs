@@ -62,7 +62,6 @@ export default defineConfig({
                 { text: 'Getting Started', link: '/python-library/package-mode/getting-started' },
                 { text: 'Markets', link: '/python-library/package-mode/markets' },
                 { text: 'Currencies', link: '/python-library/package-mode/currencies' },
-                { text: 'Configuration', link: '/python-library/package-mode/configuration' },
               ]
             }
         ],
