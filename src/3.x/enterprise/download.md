@@ -17,25 +17,48 @@ Prospective customers can contact us to [request sample data](https://www.tradin
 Remember to use your [authentication token](../authentication.md) for all requests.
 
 ```
-https://api.tradinghours.com/v3/download
+https://api.tradinghours.com/v4/download
 ```
 
-### How often does data update?
+### How It Works
 
-When you first send a request to the `download` endpoint you will get a JSON response saying "Generating download. Check back in a few minutes."
-The HTTP status code will be [202: Accepted](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202).
-In the background, our system starts generating the ZIP file with all data that you have access to.
-This usually takes 1-2 minutes.
+Your data file is automatically generated and kept up-to-date whenever the database is updated. When you make a request to the download endpoint, you will receive a redirect to a presigned S3 URL where you can download the ZIP file.
 
-On subsequent requests after the ZIP has been generated, the download will begin.
+### Checking for Updates
 
-Whenever we update the database, the ZIP file on our server will be deleted.
-On the next request, our system will begin regenerating your ZIP file.
-This ensures you always receive the latest data.
+The download endpoint supports efficient cache checking using ETags. This allows you to check if new data is available without downloading the entire file.
 
-Use the [Last Updated API endpoint](../endpoints/last-updated) to check the data was last updated.
+**Recommended: Using If-None-Match with GET requests**
 
-Please <u>do not</u> poll the Bulk Download endpoint to check for updates. Poll the Last Updated endpoint instead.
+The most efficient approach is to include the `If-None-Match` header with your ETag from the previous download in your GET request:
+
+```bash
+curl -L -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "If-None-Match: \"abc123...\"" \
+  https://api.tradinghours.com/v4/download
+```
+
+This provides two benefits in a single request:
+- If the file **hasn't changed**: You'll receive a `304 Not Modified` response, saving bandwidth and time
+- If the file **has changed**: You'll be immediately redirected to the presigned S3 URL to download the updated file
+
+**Alternative: Using HEAD requests**
+
+If you only want to check metadata without triggering a download, you can use a HEAD request:
+
+```bash
+curl -I -H "Authorization: Bearer YOUR_TOKEN" \
+  https://api.tradinghours.com/v4/download
+```
+
+The response will include:
+- `Content-Type`: application/zip
+- `Content-Length`: Size of the file in bytes
+- `ETag`: A unique identifier for the current version of the file
+- `Last-Modified`: When the file was last updated
+
+You can also include `If-None-Match` with HEAD requests to get a `304 Not Modified` response if nothing has changed.
+
 
 ## Data Dictionary
 

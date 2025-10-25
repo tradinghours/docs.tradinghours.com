@@ -109,8 +109,10 @@ source = https://api.tradinghours.com/v4/download
 ##### 2. Custom HTTPS Endpoint
 ```ini
 [data]
+token = OPTIONAL-TOKEN-FOR-YOUR-SERVER
 source = https://example.com/data.zip
 ```
+- Token can be set to be used as a Bearer token in the Authorization header
 - Uses ETag headers for change detection with a HEAD request
 - Falls back to always downloading if headers unavailable
 - Useful for custom data distribution servers
