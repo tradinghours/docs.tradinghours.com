@@ -14,7 +14,7 @@ Prospective customers can contact us to [request sample data](https://www.tradin
 
 
 ### Example Request
-Remember to use your [authentication token](../authentication.md) for all requests.
+Remember to use your [authentication token](/3.x/authentication.md) for all requests.
 
 ```
 https://api.tradinghours.com/v4/download
