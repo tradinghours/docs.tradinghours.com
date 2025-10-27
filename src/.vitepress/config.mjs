@@ -87,7 +87,7 @@ export default defineConfig({
               { text: 'Market Holidays', link: '/3.x/enterprise/market-holidays' },
               { text: 'Currency Holidays', link: '/3.x/enterprise/currency-holidays' },
               { text: 'Regional Holidays', link: '/3.x/enterprise/regional-and-religious-holidays' },
-              { text: 'Data Download (CSV)', link: '/3.x/enterprise/download' }
+              { text: 'Data Download (CSV)', link: '/4.x/endpoints/download' }
             ]
           }
         ],
