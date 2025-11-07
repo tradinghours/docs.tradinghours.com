@@ -91,7 +91,7 @@ This API returns the list of Currency Non-Settlement Dates for a particular curr
 | date | Date | Shows the date of the holiday for the currency. |
 | name | String | Describes the name of the holiday. |
 | has_settlement | Boolean | Displays in true/false if the market has settlement for the holiday. |
-| observed | Boolean | Displays in true/false if the holiday is observed. |
+| observed | Boolean | Indicates that settlement is closed in observance of a holiday that officially falls on another date. |
 | memo | String | A description or additional details about the holiday, if applicable. |
 
 ### Query String Parameters
