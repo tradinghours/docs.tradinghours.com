@@ -100,7 +100,7 @@ Check out our [python library](/python-library/). The library runs on top of the
 | Holiday Name | Normalized holiday name. Holiday names are normalized to make it easier to track holidays year-to-year. For example, instead of saying markets are closed for "Christmas Eve", it will just be "Christmas." |
 | Schedule | Indicates if the market is closed or has an irregular trading schedule. If this field is anything other than "Closed" the schedule and FinID can be looked up in the Schedules table for details. |
 | Settlement | Indicates if there is trade settlement on this date. |
-| Observed | ates that the market is closed in observance of a holiday that officially falls on another date ("OBS" or blank) |
+| Observed | Indicates that the market is closed in observance of a holiday that officially falls on another date ("OBS" or blank) |
 | Memo | Further description of this market, if required |
 | Status | Indicates if the market is open or closed on the given date. |
 
