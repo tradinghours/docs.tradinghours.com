@@ -9,6 +9,10 @@ export default defineConfig({
   // Generates /llms.txt, /llms-full.txt, and a markdown twin of every page
   // (e.g. /3.x/authentication.md) per the llmstxt.org spec.
   vite: {
+    // Avoid Vite's default port (5173), which conflicts with other local dev servers.
+    server: {
+      port: 5180,
+    },
     plugins: [
       llmstxt({
         domain: 'https://docs.tradinghours.com',
