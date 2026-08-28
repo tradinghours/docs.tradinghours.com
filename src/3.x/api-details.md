@@ -1,3 +1,7 @@
+---
+description: API conventions including FinID market identifiers, MIC mapping, response formats, and versioning for the TradingHours.com API.
+---
+
 # API Details
 
 [[toc]]

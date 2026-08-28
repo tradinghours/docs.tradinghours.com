@@ -1,3 +1,7 @@
+---
+description: Get key information about a market or trading venue by FinID, including asset type, products, and available data ranges.
+---
+
 # Market Details
 
 [[toc]]

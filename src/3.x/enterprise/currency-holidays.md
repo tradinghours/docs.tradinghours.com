@@ -1,3 +1,7 @@
+---
+description: Enterprise endpoint for currency settlement holidays, the dates when the central bank for a given currency is not settling transactions.
+---
+
 # Currency Holidays
 
 [[toc]]

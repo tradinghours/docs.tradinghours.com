@@ -1,3 +1,7 @@
+---
+description: Enterprise endpoint for public and religious holiday calendars, which often differ from market holidays.
+---
+
 # Regional & Religious Holidays
 
 [[toc]]

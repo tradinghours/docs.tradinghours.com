@@ -1,3 +1,7 @@
+---
+description: How to authenticate TradingHours.com API requests with an API token, passed as a query parameter or Authorization Bearer header.
+---
+
 # Authentication
 
 [[toc]]

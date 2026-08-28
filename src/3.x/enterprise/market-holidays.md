@@ -1,3 +1,7 @@
+---
+description: Enterprise endpoint for past and future market holiday calendars, including full closures and partial trading days, for all markets by FinID.
+---
+
 # Market Holidays
 
 [[toc]]

@@ -1,3 +1,7 @@
+---
+description: Enterprise endpoints for detailed trading schedules and phases (pre-open, auctions, continuous trading, post-close) for every market, in three formats for different use cases.
+---
+
 # Trading Hours
 
 [[toc]]

@@ -1,3 +1,7 @@
+---
+description: Overview of the TradingHours.com market data API, which provides trading hours, market holidays, currency holidays, and real-time market status for 1,000+ exchanges and trading venues worldwide.
+---
+
 # Introduction
 
 [[toc]]

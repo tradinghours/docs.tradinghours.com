@@ -1,3 +1,7 @@
+---
+description: Check the current local time at any market or trading venue.
+---
+
 # Local Time
 
 [[toc]]

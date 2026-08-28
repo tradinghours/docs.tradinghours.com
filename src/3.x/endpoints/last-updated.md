@@ -1,3 +1,7 @@
+---
+description: Get the timestamp of the most recent data update, useful for scheduling daily data ingestion.
+---
+
 # Last Updated
 
 [[toc]]

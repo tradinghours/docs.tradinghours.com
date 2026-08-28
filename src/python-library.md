@@ -1,3 +1,7 @@
+---
+description: Official Python package for TradingHours.com data. Query trading hours, holidays, and market status locally in package mode, or run an on-premise API server in server mode.
+---
+
 # Official Python Library
 
 **GitHub:** [https://github.com/tradinghours/tradinghours-python](https://github.com/tradinghours/tradinghours-python)

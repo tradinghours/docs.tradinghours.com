@@ -1,3 +1,7 @@
+---
+description: Enterprise bulk download of the complete dataset as CSV or Excel flat files, with the full data dictionary for every table and field.
+---
+
 # Data Downloads
 
 [[toc]]

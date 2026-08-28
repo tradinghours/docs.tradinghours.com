@@ -1,3 +1,7 @@
+---
+description: Change log for the TradingHours.com API. New fields and parameters are additive; existing formats never break.
+---
+
 # Change Log
 
 ## December 10, 2024

@@ -1,3 +1,7 @@
+---
+description: Real-time market status endpoint returning whether a market is open or closed, the current trading phase, and when it opens or closes next, accounting for holidays and irregular schedules.
+---
+
 # Market Status
 
 [[toc]]
