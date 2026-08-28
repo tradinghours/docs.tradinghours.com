@@ -3,7 +3,7 @@ import llmstxt from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "TradingHours API Docs",
+  title: "TradingHours Docs",
   description: "Official Documentation for TradingHours.com",
 
   // Generates /llms.txt, /llms-full.txt, and a markdown twin of every page
@@ -17,6 +17,9 @@ export default defineConfig({
         details: 'The API delivers structured, machine-readable financial calendar data over JSON (REST), bulk CSV/Excel download, an official Python package, Snowflake, or an on-premise deployment. Authentication uses API tokens. Enterprise data access is licensed annually; see https://www.tradinghours.com/data for products and https://www.tradinghours.com/llms.txt for a site-wide overview.',
         // Meta-refresh redirect stubs, not real content
         ignoreFiles: ['3.x/index.md', '3.x/endpoints/index.md', '3.x/enterprise/index.md'],
+        // The introduction page is rewritten to the site root (index), so
+        // index pages must be included for it to appear in llms.txt.
+        excludeIndexPage: false,
       }),
     ],
   },
@@ -31,6 +34,10 @@ export default defineConfig({
     `]
   ],
 
+  rewrites: {
+    '3.x/introduction.md': 'index.md'
+  },
+
   sitemap: {
     hostname: 'https://docs.tradinghours.com'
   },
@@ -39,7 +46,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/assets/logo.svg',
-
+    outline: [2, 4],
     nav: [
       { text: 'TradingHours.com', link: 'https://www.tradinghours.com' },
       { text: 'Python Library', link: 'https://github.com/tradinghours/tradinghours-python' }
@@ -49,32 +56,61 @@ export default defineConfig({
       {
         text: "Getting Started",
         items: [
-            { text: 'Introduction', link: '/3.x/introduction' },
+            { text: 'Introduction', link: '/' },
             { text: 'Authentication', link: '/3.x/authentication' },
-            { text: 'API Details', link: '/3.x/api-details' },
-            { text: 'Python Library', link: '/python-library' },
             { text: 'Change Log', link: '/change-log' },
         ],
-      }, {
-        text: "Basic API Endpoints",
+      },
+      {
+        text: "Python Library",
         items: [
-            { text: 'Find Markets', link: '/3.x/endpoints/find-markets' },
-            { text: 'Market Details', link: '/3.x/endpoints/market-details' },
-            { text: 'Market Status', link: '/3.x/endpoints/market-status' },
-            { text: 'Local Times', link: '/3.x/endpoints/local-time' },
-            { text: 'Timezones', link: '/3.x/endpoints/timezones' },
-            { text: 'Last Updated', link: '/3.x/endpoints/last-updated' },
+            { text: 'Overview', link: '/python-library/' },
+            { 
+              text: 'Server Mode', 
+              collapsed: false,
+              items: [
+                { text: 'Getting Started', link: '/python-library/server-mode/getting-started' },
+                { text: 'API Endpoints', link: '/python-library/server-mode/api-endpoints' },
+                { text: 'Configuration', link: '/python-library/server-mode/configuration' },
+              ]
+            },
+            {
+              text: 'Package Mode',
+              collapsed: false,
+              items: [
+                { text: 'Getting Started', link: '/python-library/package-mode/getting-started' },
+                { text: 'Markets', link: '/python-library/package-mode/markets' },
+                { text: 'Currencies', link: '/python-library/package-mode/currencies' },
+              ]
+            }
         ],
-      }, {
-        text: "Enterprise API Endpoints",
+      },
+      {
+        text: "TradingHours API",
         items: [
-            { text: 'Trading Hours', link: '/3.x/enterprise/trading-hours' },
-            { text: 'Market Holidays', link: '/3.x/enterprise/market-holidays' },
-            { text: 'Currency Holidays', link: '/3.x/enterprise/currency-holidays' },
-            { text: 'Regional Holidays', link: '/3.x/enterprise/regional-and-religious-holidays' },
-            { text: 'Data Download (CSV)', link: '/3.x/enterprise/download' }
+          { text: 'API Details', link: '/3.x/api-details' },
+          {
+            text: 'Endpoints',
+            collapsed: false,
+            items: [
+              // Basic Endpoints
+              { text: 'Find Markets', link: '/3.x/endpoints/find-markets' },
+              { text: 'Market Details', link: '/3.x/endpoints/market-details' },
+              { text: 'Market Status', link: '/3.x/endpoints/market-status' },
+              { text: 'Local Times', link: '/3.x/endpoints/local-time' },
+              { text: 'Timezones', link: '/3.x/endpoints/timezones' },
+              { text: 'Last Updated', link: '/3.x/endpoints/last-updated' },
+
+              // Enterprise Endpoints
+              { text: 'Trading Hours', link: '/3.x/enterprise/trading-hours' },
+              { text: 'Market Holidays', link: '/3.x/enterprise/market-holidays' },
+              { text: 'Currency Holidays', link: '/3.x/enterprise/currency-holidays' },
+              { text: 'Regional Holidays', link: '/3.x/enterprise/regional-and-religious-holidays' },
+              { text: 'Data Download (CSV)', link: '/4.x/endpoints/download' }
+            ]
+          }
         ],
-      }
+      },
     ],
 
     socialLinks: [

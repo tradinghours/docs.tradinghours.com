@@ -4,6 +4,10 @@ description: Change log for the TradingHours.com API. New fields and parameters 
 
 # Change Log
 
+## October 27, 2025
+
+- Add [Data Download](/4.x/endpoints/download) API endpoint for version 4 and update documentation on v3 to recommend using the new endpoint.
+
 ## December 10, 2024
 
 - Add `holidays_min_date` and `holidays_max_date` to the [Find Markets](/3.x/endpoints/find-markets) and [Market Details](/3.x/endpoints/market-details) endpoints.
