@@ -4,6 +4,10 @@ description: Change log for the TradingHours.com API. New fields and parameters 
 
 # Change Log
 
+## October 16, 2026
+
+- Deprecate the [Simplified Trading Hours API](/3.x/enterprise/trading-hours-simplified). It remains available for existing integrations; new integrations should use the [Single-Day](/3.x/enterprise/trading-hours#single-day-trading-hours-api) or [Multiple-Day](/3.x/enterprise/trading-hours#multiple-day-trading-hours-api) Trading Hours APIs.
+
 ## October 27, 2025
 
 - Add [Data Download](/4.x/endpoints/download) API endpoint for version 4 and update documentation on v3 to recommend using the new endpoint.

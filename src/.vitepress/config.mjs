@@ -19,8 +19,8 @@ export default defineConfig({
         title: 'TradingHours.com API Documentation',
         description: 'Official documentation for the TradingHours.com market data API: trading hours, market holidays, currency holidays, and real-time market status for 1,000+ exchanges and trading venues worldwide.',
         details: 'The API delivers structured, machine-readable financial calendar data over JSON (REST), bulk CSV/Excel download, an official Python package, Snowflake, or an on-premise deployment. Authentication uses API tokens. Enterprise data access is licensed annually; see https://www.tradinghours.com/data for products and https://www.tradinghours.com/llms.txt for a site-wide overview.',
-        // Meta-refresh redirect stubs, not real content
-        ignoreFiles: ['3.x/index.md', '3.x/endpoints/index.md', '3.x/enterprise/index.md'],
+        // Meta-refresh redirect stubs, not real content, plus deprecated legacy pages
+        ignoreFiles: ['3.x/index.md', '3.x/endpoints/index.md', '3.x/enterprise/index.md', '3.x/enterprise/trading-hours-simplified.md'],
         // The introduction page is rewritten to the site root (index), so
         // index pages must be included for it to appear in llms.txt.
         excludeIndexPage: false,
@@ -43,7 +43,9 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://docs.tradinghours.com'
+    hostname: 'https://docs.tradinghours.com',
+    // Deprecated legacy pages are only reachable via links from their replacement pages
+    transformItems: (items) => items.filter((item) => !item.url.includes('trading-hours-simplified'))
   },
 
   cleanUrls: true,

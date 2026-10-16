@@ -8,13 +8,12 @@ description: Enterprise endpoints for detailed trading schedules and phases (pre
 
 ## Overview
 
-There are three API endpoints that provide information on market trading hours. The endpoints provide the same information in different formats. Each endpoint is designed for a different use-case.
+There are two API endpoints that provide information on market trading hours. The endpoints provide the same information in different formats. Each endpoint is designed for a different use-case.
 
 The APIs are:
 
 1. [Single-Day Trading Hours API](#single-day-trading-hours-api)
 2. [Multiple-Day Trading Hours API](#multiple-day-trading-hours-api)
-3. [Simplified Trading Hours API](#simplified-trading-hours-api)
 
 The sections below will explain the intended use-case for each API.
 
@@ -290,158 +289,10 @@ https://api.tradinghours.com/v3/markets/hours-multiday?fin_id=jp.jpx.indextop3&s
 }
 ```
 
-## Simplified Trading Hours API
+<div id="simplified-trading-hours-api"></div>
 
-Sometimes, you don't need information on every trading phase.
+::: details Legacy: Simplified Trading Hours API (Deprecated)
+The Simplified Trading Hours API (`/v3/markets/hours-simplified`) is deprecated and kept only for existing integrations. New integrations should use the Single-Day or Multiple-Day Trading Hours APIs above.
 
-If you just want to know the regular trading hours, pre-trading hours, and post-trading hours, you can use the Simplified Trading Hours API Endpoint.
-
-::: warning Overnight Trading Sessions
-Some markets have overnight trading sessions. To represent this in the API, we use what we call "24hr+ time". In some cases, the end time may exceed 24:00. This indicates that the market closes the following day.
-
-For example, if the start time is 16:00 and the end time is 32:00, the market opens at 4:00 pm and closes the next day at 8:00 am.
+[View the legacy Simplified Trading Hours API documentation](./trading-hours-simplified.md)
 :::
-
-### Schema
-
-| Field | Format | Description |
-| ------------- | ------------- | --------- |
-| day | String | Day of the week in string format. |
-| open | Boolean | Describes if the market is open in true/false. |
-| time_start | Time | Describes the time the market trading session opens. |
-| time_end | Time | Describes the time the market trading session ends. |
-| lunch | Boolean | Describes if the market has observed lunch hours in true/false. |
-| lunch_start | Time | If observed lunch hours, this describes when lunch hours start. |
-| lunch_end | Time | If observing lunch hours, this describes when lunch hours end. |
-| pre_hours_start | Time | If pre-hours, describes what time they start. |
-| pre_hours_end | Time | If pre-hours, describes what time they end. |
-| post_hours_start | Time | If post-hours, describes what time they start. |
-| post_hours_end | Time | If post-hours, describes what time they end. |
-
-### Query String Parameters
-
-Supported query string parameters are listed in the table below:
-
-| Parameter | Supported Values | Default | Description |
-| ------------- | ------------- | --------- | --------- |
-| fin_id | Valid FinID | N/A | Specify which market to show data for. |
-
-If you use a query string parameter that isn't supported, the API will ignore the invalid query string parameters and execute the ones it recognizes.
-
-### Examples
-Remember to use your [authentication token](../authentication.md) for all requests.
-
-#### Get Simplified Trading Hours for FinID
-```
-https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=us.nyse
-```
-
-#### Get Simplified Trading Hours for MIC
-```
-https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=XNYS
-```
-
-#### Get Simplified Trading Hours for FinID
-```
-https://api.tradinghours.com/v3/markets/hours-simplified?fin_id=JP.JPX.INDEXSPECIAL
-```
-
-### Sample JSON Response
-
-```json
-{
-  "data": [
-    {
-      "day": "Sunday",
-      "open": false,
-      "time_start": null,
-      "time_end": null,
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": null,
-      "pre_hours_end": null,
-      "post_hours_start": null,
-      "post_hours_end": null
-    },
-    {
-      "day": "Monday",
-      "open": true,
-      "time_start": "09:30",
-      "time_end": "16:00",
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": "04:00",
-      "pre_hours_end": "09:30",
-      "post_hours_start": "16:00",
-      "post_hours_end": "20:00"
-    },
-    {
-      "day": "Tuesday",
-      "open": true,
-      "time_start": "09:30",
-      "time_end": "16:00",
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": "04:00",
-      "pre_hours_end": "09:30",
-      "post_hours_start": "16:00",
-      "post_hours_end": "20:00"
-    },
-    {
-      "day": "Wednesday",
-      "open": true,
-      "time_start": "09:30",
-      "time_end": "16:00",
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": "04:00",
-      "pre_hours_end": "09:30",
-      "post_hours_start": "16:00",
-      "post_hours_end": "20:00"
-    },
-    {
-      "day": "Thursday",
-      "open": true,
-      "time_start": "09:30",
-      "time_end": "16:00",
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": "04:00",
-      "pre_hours_end": "09:30",
-      "post_hours_start": "16:00",
-      "post_hours_end": "20:00"
-    },
-    {
-      "day": "Friday",
-      "open": true,
-      "time_start": "09:30",
-      "time_end": "16:00",
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": "04:00",
-      "pre_hours_end": "09:30",
-      "post_hours_start": "16:00",
-      "post_hours_end": "20:00"
-    },
-    {
-      "day": "Saturday",
-      "open": false,
-      "time_start": null,
-      "time_end": null,
-      "lunch": false,
-      "lunch_start": null,
-      "lunch_end": null,
-      "pre_hours_start": null,
-      "pre_hours_end": null,
-      "post_hours_start": null,
-      "post_hours_end": null
-    }
-  ]
-}
-```
