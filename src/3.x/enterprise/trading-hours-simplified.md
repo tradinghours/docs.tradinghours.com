@@ -1,6 +1,8 @@
 ---
 description: Deprecated legacy endpoint that returns a simplified weekly trading schedule. Use the Single-Day or Multiple-Day Trading Hours APIs instead.
 search: false
+prev: false
+next: false
 head:
   - - meta
     - name: robots
